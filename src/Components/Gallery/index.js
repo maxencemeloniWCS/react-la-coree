@@ -4,7 +4,6 @@ import Card from "./Card";
 function Gallery() {
     const [isLoading, setIsLoading] = useState(true);
     const [cards, setCards] = useState(null);
-    console.log(process.env.GATSBY_API_URL);
     useEffect(() => {
         fetch(process.env.GATSBY_API_URL + '/galleries')
             .then(res => res.json())
@@ -19,8 +18,8 @@ function Gallery() {
 
     return (
         <section id="gallery">
-        <div className="gallery-arrow" id="arrow-left"><i className="fa fa-chevron-left"/>></div>
-        <div className="gallery-arrow" id="arrow-right"><i className="fa fa-chevron-right"/>></div>
+        <div className="gallery-arrow" id="arrow-left"><i className="fa fa-chevron-left"/></div>
+        <div className="gallery-arrow" id="arrow-right"><i className="fa fa-chevron-right"/></div>
         <div id="gallery-wrapper">
             {isLoading ? '' :
                 cards.map(card => <Card card={card} key={card.id}/>)

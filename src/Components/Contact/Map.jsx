@@ -6,7 +6,8 @@ function Map() {
             <iframe
                 width="100%"
                 height="600"
-                frameborder="0"
+                title="Google map"
+                frameBorder="0"
                 src={"https://www.google.com/maps/embed/v1/search?key="+process.env.GATSBY_GOOGLE_API_KEY+"&q=record+stores+in+Seattle"} allowfullscreen>
                         </iframe>
         </div>

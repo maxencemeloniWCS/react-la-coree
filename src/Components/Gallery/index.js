@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 // import Card from "./Card";
-import "./style.css";
+import "./style.css"
 
 import {
     CarouselProvider,
@@ -25,7 +25,6 @@ function Gallery() {
             .then(res => {
                 setCards(res.slider)
                 setIsLoading(false)
-                
             })
             .catch(err => console.log(err))
     }, [])
@@ -45,7 +44,7 @@ function Gallery() {
                         : cards.map(card => <Card card={card} key={card.id} />)}
                 </div>
             </section> */}
-            
+
             {isLoading ? (
                 ""
             ) : (
@@ -56,18 +55,20 @@ function Gallery() {
                             totalSlides={cards.length}
                             visibleSlides={5}
                         >
-                            <Slider><>
-                                {cards.map((card, i) => (
-                                    <Slide index={i} key={i}>                                      
-                                        <Image
-                                            src={
-                                                process.env.GATSBY_API_URL + card.image.formats.small.url
-                                            }
+                            <Slider>
+                                <>
+                                    {cards.map((card, i) => (
+                                        <Slide index={i} key={i}>
+                                            <Image
+                                                src={
+                                                    process.env.GATSBY_API_URL +
+                                                    card.image.formats.small.url
+                                                }
                                             />
                                             <p>{card.title}</p>
-                                    </Slide>
-                                ))}
-                            </>
+                                        </Slide>
+                                    ))}
+                                </>
                             </Slider>
                             <ButtonBack className="gallery-arrow" id="arrow-left">
                                 <i className="fa fa-chevron-left" />

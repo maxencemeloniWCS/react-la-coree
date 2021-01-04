@@ -11,7 +11,6 @@ function About() {
         fetch(process.env.GATSBY_API_URL + '/abouts')
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 setAbout(res[0]);
                 setIsLoading(false);
             })

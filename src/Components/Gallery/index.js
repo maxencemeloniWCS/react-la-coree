@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Card from "./Card";
 
-const API_URL = 'http://localhost:1337';
-
 function Gallery() {
     const [isLoading, setIsLoading] = useState(true);
     const [cards, setCards] = useState(null);
-    console.log(process.env.API_URL);
+    console.log(process.env.GATSBY_API_URL);
     useEffect(() => {
-        fetch(API_URL + '/galleries')
+        fetch(process.env.GATSBY_API_URL + '/galleries')
             .then(res => res.json())
             .then(res => {
                 setCards(res);

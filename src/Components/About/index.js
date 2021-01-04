@@ -2,15 +2,13 @@ import React, {useEffect, useState} from 'react';
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 
-const API_URL = 'http://localhost:1337';
-
 function About() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [about, setAbout] = useState(null);
 
     useEffect(() => {
-        fetch(API_URL + '/abouts')
+        fetch(process.env.GATSBY_API_URL + '/abouts')
             .then(res => res.json())
             .then(res => {
                 console.log(res)

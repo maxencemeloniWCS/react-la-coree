@@ -8,7 +8,6 @@ import Gallery from '../Components/Gallery';
 import Contact from '../Components/Contact';
 import MobileOverlay from '../Components/MobileOverlay';
 import Footer from '../Components/Footer';
-const APP_API_URL = 'http://localhost:1337';
 
 export default function Home() {
   return (

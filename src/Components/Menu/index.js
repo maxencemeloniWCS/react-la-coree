@@ -7,7 +7,7 @@ function Menu() {
     const [products, setProducts] = useState(null);
 
     useEffect(() => {
-        fetch(process.env.API_URL+'/products')
+        fetch(process.env.GATSBY_API_URL+'/products')
             .then(res => res.json())
             .then(res => {
                 setProducts(res);

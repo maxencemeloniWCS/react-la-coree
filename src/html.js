@@ -30,6 +30,8 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="https://kit.fontawesome.com/a078a7a723.js" crossOrigin="anonymous"></script>
+
       </body>
     </html>
   )

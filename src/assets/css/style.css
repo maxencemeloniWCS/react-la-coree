@@ -286,9 +286,13 @@ section#gallery .gallery-arrow {
     color: #f8f8f8;
     opacity: 0.7;
     left: 50px;
-    top: 40%;
+    top: 50%;
+    top: 50%;
     z-index: 1;
     cursor: pointer;
+    border: 0;
+    background: none;
+    margin-top: -26px;
 }
 section#gallery .gallery-arrow:hover {
     opacity: 1;

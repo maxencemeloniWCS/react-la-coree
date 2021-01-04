@@ -5,10 +5,10 @@ function Gallery() {
     const [isLoading, setIsLoading] = useState(true);
     const [cards, setCards] = useState(null);
     useEffect(() => {
-        fetch(process.env.GATSBY_API_URL + '/galleries')
+        fetch(process.env.GATSBY_API_URL + '/gallery')
             .then(res => res.json())
             .then(res => {
-                setCards(res);
+                setCards(res.slider);
                 setIsLoading(false);
             })
             .catch(err => console.log(err));

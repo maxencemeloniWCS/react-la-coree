@@ -1,32 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Modal from 'react-modal';
 import Markdown from 'react-markdown';
-import './style.css';
+import './Footer.css';
 
 function Footer() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
-    const [legalNotice, setLegalNotice] = useState(null);
-
-    useEffect(() => {
-        fetch(process.env.GATSBY_API_URL + '/legal-notice')
-            .then(res => res.json())
-            .then(res => {
-                setLegalNotice(res.legalnotice);
-                setIsLoading(false);
-            })
-            .catch(err => console.log(err));
-    }, []);
-
+    const data = useStaticQuery(graphql`
+        {
+            strapiLegalNotice {
+                legalnotice
+            }
+        }
+    `);
     const openModal = e => {
         e.preventDefault();
         setModalIsOpen(true);
     };
-
     const closeModal = () => {
         setModalIsOpen(false);
     };
-
     return (
         <footer>
             <div className="wrapper">
@@ -47,7 +40,7 @@ function Footer() {
                         overlayClassName="Overlay"
                     >
                         <div onClick={closeModal} role="alertdialog">
-                            {isLoading ? 'Chargement...' : <Markdown>{legalNotice}</Markdown>}
+                            <Markdown>{data.strapiLegalNotice.legalnotice}</Markdown>
                         </div>
                     </Modal>
                 </div>

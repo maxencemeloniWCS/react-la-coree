@@ -269,7 +269,7 @@ section#about #about-right {
 section#about #about-right img {
   border-radius: 50%;
   width: 60%;
-  box-shadow: 0 0 22px -7px rgba(0, 0, 0, 0.8);
+  border: 2px solid #151515
 }
 
 section#menu {

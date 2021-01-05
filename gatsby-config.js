@@ -22,6 +22,7 @@ module.exports = {
           `gallery`,
           `legal-notice`,
           `slideshow`,
+          `settings`
         ],
       },
     },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import './gallery.css';
+import './Gallery.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function Gallery() {

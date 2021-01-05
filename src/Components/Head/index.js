@@ -42,7 +42,7 @@ function Header() {
         >
           {images.map((image, i) => {
             return (
-              <div>
+              <div key={i}>
                 <img
                   src={process.env.GATSBY_API_URL + image.url}
                   alt={image.name}

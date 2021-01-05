@@ -1,25 +1,54 @@
 .Modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  transform: translate(-50%, -50%);
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  padding: 20px;
-  z-index: 1;
-  cursor: default;
+    position: absolute;
+    max-width: 1280px;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1;
+    cursor: default;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+.Modal::-webkit-scrollbar {
+    width: 40px;
+}
+.Modal::-webkit-scrollbar-thumb {
+    border: 15px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.Modal:focus {
+    outline: none;
+}
+
+.Modal h1,
+.Modal h2,
+.Modal h3,
+.Modal h4,
+.Modal h5,
+.Modal h6 {
+    line-height: 300%;
 }
 
 .Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 2;
 }

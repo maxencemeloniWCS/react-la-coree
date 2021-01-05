@@ -33,7 +33,7 @@ function Footer() {
                 <p>Copyright blabla</p>
                 <ul>
                     <li>
-                        <a href="#" onClick={openModal} title="">
+                        <a href="legalnotice" onClick={openModal} title="">
                             Mentions légales
                         </a>
                     </li>
@@ -46,7 +46,7 @@ function Footer() {
                         className="Modal"
                         overlayClassName="Overlay"
                     >
-                        <div onClick={closeModal}>
+                        <div onClick={closeModal} role="alertdialog">
                             {isLoading ? 'Chargement...' : <Markdown>{legalNotice}</Markdown>}
                         </div>
                     </Modal>

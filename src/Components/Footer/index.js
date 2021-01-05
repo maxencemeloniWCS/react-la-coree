@@ -33,7 +33,7 @@ function Footer() {
                 <p>Copyright blabla</p>
                 <ul>
                     <li>
-                        <a href="legalnotice" onClick={openModal} title="">
+                        <a href="#mentions-legales" onClick={openModal} title="">
                             Mentions légales
                         </a>
                     </li>

@@ -6,51 +6,29 @@ import RightSide from "./RightSide";
 function About() {
 
     const [isLoading, setIsLoading] = useState(true);
-    const [about, setAbout] = useState(null);
 
     const data = useStaticQuery(graphql`
-        query QueryAbout   {
-    strapiAbout {
-      title
-      description
-      image {
-        url
-        formats {
-          thumbnail {
-            url
-            height
-            width
+    query About {
+      strapiAbout {
+        title
+        description
+        image {
+          formats {
+            small {
+              url
+            }
           }
         }
       }
     }
-  }
   `);
-    console.log(data);
-
-
-
-
-
-    useEffect(() => {
-        fetch(process.env.GATSBY_API_URL + '/abouts')
-            .then(res => res.json())
-            .then(res => {
-                setAbout(res[0]);
-                setIsLoading(false);
-            })
-            .catch(err => console.log(err));
-    }, [])
-
 
     return (<section id="about">
         <div className="wrapper">
-            {isLoading ? '' :
-                <div>
-                    <LeftSide title={about.title} description={about.description}/>
-                    <RightSide image={about.image.url}/>
-                </div>
-            }
+        <div>
+            <LeftSide title={data.strapiAbout.title} description={data.strapiAbout.description}/>
+            <RightSide image={data.strapiAbout.image[0].formats.small.url}/>
+        </div>
         </div>
     </section>)
 

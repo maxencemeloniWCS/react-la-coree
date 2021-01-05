@@ -352,6 +352,9 @@ section#gallery .gallery-arrow {
     top: 40%;
     z-index: 1;
     cursor: pointer;
+    border: 0;
+    background: none;
+    margin-top: -26px;
 }
 
 section#gallery .gallery-arrow:hover {

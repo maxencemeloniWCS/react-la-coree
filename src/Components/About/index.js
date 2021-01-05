@@ -1,12 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 
 function About() {
-
-    const [isLoading, setIsLoading] = useState(true);
-
     const data = useStaticQuery(graphql`
     query About {
       strapiAbout {

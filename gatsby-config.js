@@ -1,3 +1,4 @@
+require("dotenv").config();
 /**
  * Configure your Gatsby site with this file.
  *
@@ -7,7 +8,23 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-env-variables`
+    `gatsby-env-variables`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.GATSBY_API_URL || "http://localhost:1337",
+        queryLimit: -1, // -1 = No limits // Default to 100
+        contentTypes: [
+          'products'
+        ],
+        singleTypes: [
+          `about`,
+          `gallery`,
+          `legal-notice`,
+          `slideshow`,
+        ],
+      },
+    },
   ],
 /*  siteMetadata:{
     title :"Restaurant La Corée - restaurant barbecue coréen à Lyon",

@@ -3,12 +3,20 @@ import React, {useState, useRef, useEffect, useCallback} from 'react';
 function Nav() {
     const [scrolled, setScrolled] = useState(false);
 
+
+    const [headerHeight, _setHeaderHeight] = useState(0);
+    const headerHeightRef = useRef(headerHeight);
+    function setHeaderHeight(data) {
+        headerHeightRef.current = data;
+        _setHeaderHeight(data);
+    }
+
     let lastScrollTop = useRef(0);
 
     const handleScroll = useCallback(() => {
         let st = document.documentElement.scrollTop;
         const offset = window.scrollY;
-        if (offset > 600) {
+        if (offset > headerHeightRef.current) {
             if (st > lastScrollTop.current) {
                 setScrolled(false);
             } else {
@@ -29,6 +37,8 @@ function Nav() {
     }
 
     useEffect(() => {
+        setHeaderHeight(document.getElementById('header').offsetHeight);
+
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', () => handleScroll);

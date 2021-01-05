@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {Helmet} from "react-helmet";
 
 export default function HTML(props) {
     return (
@@ -12,19 +11,9 @@ export default function HTML(props) {
                 name="viewport"
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />*/}
-            <link rel="canonical" href="https://www.restaurant-la-coree.fr"/>
+            {/*<meta name="viewport" content="width=device-width, initial-scale=1"/>*/}
             <meta name="author" content="mmapi.fr" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-            {/*<meta name="viewport" content="width=device-width, initial-scale=1"/>*/}
-            <title>Restaurant La Corée - restaurant barbecue coréen à Lyon</title>
-            <meta name="description"
-                  content="Saveurs coréennes traditionnel dans une salle conviviale au mobilier brun et aux tables dotées de teppanyaki. Barbecue Coréen"/>
-            <meta property="og:url" content="https://www.restaurant-la-coree.fr"/>
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Restaurant La Corée - restaurant barbecue coréen à Lyon"/>
-            <meta property="og:description" content="Saveurs coréennes traditionnel dans une salle conviviale au mobilier brun et aux tables dotées de teppanyaki. Barbecue Coréen"/>
-            <meta property="og:image" content=""/>
-
             <link
                 href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,600&display=swap"
                 rel="stylesheet"/>
@@ -42,7 +31,7 @@ export default function HTML(props) {
             dangerouslySetInnerHTML={{__html: props.body}}
         />
         {props.postBodyComponents}
-        <script src="https://kit.fontawesome.com/a078a7a723.js" crossOrigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a078a7a723.js" crossOrigin="anonymous"/>
         </body>
         </html>
     )

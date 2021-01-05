@@ -340,13 +340,16 @@ section#gallery .gallery-card {
 }
 
 section#gallery .gallery-arrow {
-  position: absolute;
-  color: #f8f8f8;
-  opacity: 0.7;
-  left: 50px;
-  top: 40%;
-  z-index: 1;
-  cursor: pointer;
+    position: absolute;
+    color: #f8f8f8;
+    opacity: 0.7;
+    left: 50px;
+    top: 40%;
+    z-index: 1;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    margin-top: -26px;
 }
 
 section#gallery .gallery-arrow:hover {

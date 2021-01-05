@@ -2,13 +2,21 @@ import React from 'react';
 import Nav from './Nav';
 import ContactBar from './ContactBar';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import {Carousel} from 'react-responsive-carousel';
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import HeadCarousel from './HeadCarousel';
 
 function Header() {
     const data = useStaticQuery(graphql`
         {
+            strapiSettings {
+                title
+                address
+                phone
+                socialmedia {
+                    facebook
+                    tripadvisor
+                }
+            }
             strapiSlideshow {
                 slider {
                     image {
@@ -24,12 +32,12 @@ function Header() {
     `);
 
     return (
-        <section id='header'>
-            <div id='header-elems'>
-                <Nav />
-                <ContactBar />
+        <section id="header">
+            <div id="header-elems">
+                <Nav data={data.strapiSettings} />
+                <ContactBar data={data.strapiSettings} />
             </div>
-            <HeadCarousel data={data} />
+            <HeadCarousel data={data.strapiSlideshow} />
         </section>
     );
 }

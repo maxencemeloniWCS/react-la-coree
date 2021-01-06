@@ -11,11 +11,7 @@ function About() {
                 title
                 description
                 image {
-                    formats {
-                        small {
-                            url
-                        }
-                    }
+                    url
                 }
             }
         }
@@ -26,7 +22,7 @@ function About() {
             <div className="wrapper">
                 <div>
                     <LeftSide title={data.strapiAbout.title} description={data.strapiAbout.description} />
-                    <RightSide image={data.strapiAbout.image[0].formats.small.url} />
+                    <RightSide image={data.strapiAbout.image[0].url} />
                 </div>
             </div>
         </section>

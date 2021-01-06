@@ -28,11 +28,19 @@ div.gradientBack {
 
 button.displayMenuButton {
     background: #151515;
+    opacity: 0.8;
     color: #f8f8f8;
-    border: 2px solid #f8f8f8;
+    border: 1px solid #f8f8f8;
     margin-bottom: 10px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 20px;
     width: 20%;
+}
+
+button.displayMenuButton:hover {
+    color: #dc3333;
+    border: 1px solid #dc3333;
+    cursor: pointer;
 }
 
 button.displayMenuButton:focus {

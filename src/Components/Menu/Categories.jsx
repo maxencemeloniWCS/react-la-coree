@@ -18,7 +18,7 @@ function Categories({categories}) {
                             </ul>
                         </li>
                     </ul>
-                    {i === 2 ? <ul><li>{' '}</li></ul> : ''}
+                    {i === 4 ? <ul><li>{' '}</li></ul> : ''}
                 </>)
             )}
         </>

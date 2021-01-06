@@ -22,9 +22,12 @@ section#menu .wrapper > ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 2 2 47%;
-    margin-right: 35px;
+    flex: 1 1 40%;
+    margin-right: 80px;
     margin-bottom: 25px;
+}
+section#menu .wrapper > ul:nth-child(2n) {
+    margin-right:0;
 }
 
 /*section#menu .wrapper > ul:nth-child(3) {
@@ -41,13 +44,18 @@ section#menu .wrapper > ul > li.category-title {
 section#menu .wrapper > ul > li.category-title h4 {
     color: #dc3333;
     margin-bottom: 15px;
-    min-height: 50px;
+    min-height: 47px;
 }
+
+
+section#menu .wrapper > ul:nth-last-child(2) > li.category-title h4 {
+    min-height: 0;
+}
+
 section#menu .wrapper > ul > li.category-title h4 span {
     width: 100%;
     display: block;
     font-weight: 400;
-
 }
 
 section#menu .wrapper > ul > li ul {
@@ -56,6 +64,9 @@ section#menu .wrapper > ul > li ul {
 section#menu .wrapper > ul > li ul li {
     margin-bottom: 10px;
 }
+
+
+
 section#menu .wrapper > ul > li ul li {
 }
 
@@ -69,6 +80,35 @@ section#menu .wrapper > ul > li ul li > span {
 
 section#menu .wrapper  > ul > li ul li > span:last-child {
     font-weight: 400;
+    padding-right: 30px
 }
 
+@media screen and (max-width: 768px) {
+    section#menu .wrapper > ul {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
 
+    section#menu .wrapper > ul:nth-child(2n) {
+        margin-right:0;
+    }
+
+    section#menu .wrapper > ul:nth-child(2) {
+        order: 4
+    }
+    section#menu .wrapper > ul:nth-child(3) {
+        order: 2
+    }
+    section#menu .wrapper > ul:nth-child(4) {
+        order: 5
+    }
+    section#menu .wrapper > ul:nth-child(5) {
+        order: 3
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    section#menu .wrapper > ul {
+    }
+}

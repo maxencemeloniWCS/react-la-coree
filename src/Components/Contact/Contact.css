@@ -56,6 +56,7 @@ section#contact #contact-form #form-contact textarea {
 }
 
 section#contact #contact-form #form-contact input:focus,
+section#contact #contact-form #form-contact button:focus,
 section#contact #contact-form #form-contact textarea:focus {
     outline: none;
 }

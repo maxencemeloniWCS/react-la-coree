@@ -22,27 +22,17 @@ function Menu() {
         }
     `);
     return (
-        <section id={isOpen ? 'menuOpen' : 'menuClose'}>
-            {isOpen ? (
-                <>
-                    <h3>
-                        <span>M</span>enu
-                    </h3>
-                    <div className="wrapper">
-                        <Categories categories={data.strapiMenu.categories} />
-                    </div>
-                </>
-            ) : (
-                <>
-                    <h3>
-                        <span>M</span>enu
-                    </h3>
-                    <div className="wrapper">
-                        <Categories categories={data.strapiMenu.categories} />
-                    </div>
-                    <button>Voir</button>
-                </>
-            )}
+        <section id="menu" className={isOpen ? 'open' : 'close'}>
+
+            <h3>
+                <span>M</span>enu
+            </h3>
+            <div className="wrapper">
+                <Categories categories={data.strapiMenu.categories} />
+            </div>
+            {!isOpen ? <>
+                <button>Voir</button>
+            </> : ''}
         </section>
     );
 }

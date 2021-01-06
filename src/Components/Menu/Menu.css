@@ -1,5 +1,13 @@
 section#menu {
     background: #151515;
+    height: 600px;
+}
+
+section#menu.open {
+    height: auto;
+}
+section#menu.close {
+
 }
 
 section#menu .wrapper {

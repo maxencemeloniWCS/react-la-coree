@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import Modal from 'react-modal';
 import Markdown from 'react-markdown';

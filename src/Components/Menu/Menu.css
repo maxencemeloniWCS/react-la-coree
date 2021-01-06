@@ -1,0 +1,71 @@
+section#menu {
+    background: #151515;
+}
+
+section#menu .wrapper {
+    flex-wrap: wrap;
+}
+
+section#menu h3 {
+    width: 100%;
+    color: #f8f8f8;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+section#menu h3 span {
+    color: #dc3333;
+}
+
+section#menu .wrapper > ul {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 50%;
+
+}
+
+section#menu .wrapper > ul > li {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+}
+section#menu .wrapper > ul > li.category-title {
+
+}
+section#menu .wrapper > ul > li.category-title h4 {
+    color: #dc3333;
+    margin-bottom: 15px;
+}
+section#menu .wrapper > ul > li.category-title h4 span {
+    width: 100%;
+    display: block;
+    font-weight: 400;
+
+}
+
+section#menu .wrapper > ul > li ul {}
+section#menu .wrapper > ul > li ul li {
+    margin-bottom: 5px;
+}
+section#menu .wrapper > ul > li ul li {}
+
+section#menu .wrapper > ul > li ul li > span {
+    align-self: center;
+    color: #d4d4d4;
+}
+
+section#menu .wrapper > ul > li ul li > span strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+section#menu .wrapper  > ul > li ul li > span span {
+}
+
+section#menu .wrapper  > ul > li ul li  > span.price {
+    margin-left: auto;
+    font-size: 18px;
+}
+

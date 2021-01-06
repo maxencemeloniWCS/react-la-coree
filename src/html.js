@@ -7,10 +7,6 @@ export default function HTML(props) {
         <head>
             <meta charSet="utf-8"/>
             <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-{/*            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-            />*/}
             {/*<meta name="viewport" content="width=device-width, initial-scale=1"/>*/}
             <meta name="author" content="mmapi.fr" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
@@ -20,7 +16,6 @@ export default function HTML(props) {
             <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet"/>
             <link rel='dns-prefetch' href='//fonts.googleapis.com' />
             <link rel='dns-prefetch' href='//s.w.org' />
-
             {props.headComponents}
         </head>
         <body {...props.bodyAttributes}>

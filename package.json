@@ -18,15 +18,16 @@
     "fs": "0.0.1-security",
     "gatsby": "^2.24.79",
     "gatsby-env-variables": "^2.0.0",
-    "pure-react-carousel": "^1.27.6",
     "gatsby-plugin-react-helmet": "^3.6.0",
     "gatsby-source-strapi": "0.0.12",
+    "pure-react-carousel": "^1.27.6",
     "query-string": "^6.13.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-ga": "^3.3.0",
+    "react-helmet": "^6.1.0",
     "react-markdown": "^5.0.3",
     "react-modal": "^3.12.1",
-    "react-helmet": "^6.1.0",
     "react-responsive-carousel": "^3.2.11"
   },
   "devDependencies": {

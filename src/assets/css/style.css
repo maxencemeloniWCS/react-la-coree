@@ -1,3 +1,6 @@
+/* Reset */
+blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}abbr,acronym,fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%}q:after,q:before{content:""}a{outline:0}input:-webkit-autofill,input:-webkit-autofill:active,input:-webkit-autofill:focus,input:-webkit-autofill:hover{-webkit-box-shadow:0 0 0 1000px #e0e1e4 inset;transition:background-color 5000s ease-in-out 0s;color:#002e62!important;caret-color:#002e62!important;-webkit-text-fill-color:#002e62!important}
+/* Global */
 * {
     box-sizing: border-box;
 }
@@ -222,54 +225,6 @@ main section {
     position: relative;
     padding: 100px 0;
     background: #f8f8f8;
-}
-
-
-section#menu {
-    background: #151515;
-}
-
-section#menu h3 {
-    width: 100%;
-    color: #f8f8f8;
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-section#menu h3 span {
-    color: #dc3333;
-}
-
-section#menu ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-section#menu ul li {
-    width: 35%;
-    margin-bottom: 25px;
-    display: flex;
-}
-
-section#menu ul li > span {
-    align-self: center;
-    color: #d4d4d4;
-}
-
-section#menu ul li > span strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-section#menu ul li > span span {
-}
-
-section#menu ul li > span.price {
-    margin-left: auto;
-    font-size: 18px;
 }
 
 

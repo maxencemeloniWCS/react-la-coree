@@ -13,8 +13,6 @@ section#contact #maps {
     height: 600px;
     position: absolute;
     z-index: 1;
-    background: url('/assets/images/map.png') no-repeat;
-    background-size: cover;
 }
 
 section#contact #contact-form {
@@ -23,14 +21,14 @@ section#contact #contact-form {
     position: absolute;
     z-index: 2;
     left: 250px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     padding: 50px;
 }
 
 section#contact #contact-form h3 {
     color: #f8f8f8;
     text-align: center;
-    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.8);
     margin-bottom: 25px;
 }
 
@@ -85,8 +83,8 @@ section#contact #contact-form #form-contact button {
 }
 
 section#contact #contact-form #form-contact button:hover {
-    border: 1px solid #000;
-    color: #000;
+    border-color: #dc3333;
+    color: #dc3333;
 }
 
 section#contact #contact-form #form-contact p#form-error {
@@ -104,12 +102,15 @@ section#contact #contact-form #form-contact p#form-error {
 
 @media screen and (max-width: 768px) {
     section#contact {
+        display: flex;
+        flex-direction: column;
         height: auto;
     }
 
     section#contact #maps {
         height: 300px;
         position: relative;
+        order: 2;
     }
 
     section#contact #contact-form {
@@ -117,11 +118,14 @@ section#contact #contact-form #form-contact p#form-error {
         position: relative;
         width: 100%;
         left: 0;
+        order: 1;
+        background: #151515;
     }
 
     section#contact #contact-form h3 {
         font-size: 24px;
     }
+
 }
 
 @media screen and (max-width: 450px) {

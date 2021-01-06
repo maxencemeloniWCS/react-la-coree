@@ -224,6 +224,8 @@ main section {
     background: #f8f8f8;
 }
 
+/* ******************************************** moved in About.css *********
+
 section#about {
 }
 
@@ -276,6 +278,8 @@ section#about #about-right img {
     width: 60%;
     box-shadow: 0 0 22px -7px rgba(0, 0, 0, 0.8);
 }
+
+******************************************** moved in About.css ********* */
 
 section#menu {
     background: #151515;

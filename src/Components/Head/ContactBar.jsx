@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ContactBar({ data }) {
+function ContactBar({data}) {
     return (
         <div id="header-bottom">
-            <div className="wrapper">
+            <div className="wrapper contactBar">
                 <div className="header-card">
                     <div>
                         <i className="fa fa-clock" />

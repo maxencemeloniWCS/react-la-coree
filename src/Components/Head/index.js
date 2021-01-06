@@ -1,8 +1,8 @@
 import React from 'react';
 import Nav from './Nav';
 import ContactBar from './ContactBar';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { graphql, useStaticQuery } from 'gatsby';
+import './Head.css';
+import {graphql, useStaticQuery} from 'gatsby';
 import HeadCarousel from './HeadCarousel';
 
 function Header() {

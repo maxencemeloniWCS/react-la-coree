@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
 
-function Nav({ data }) {
+function Nav({data}) {
     console.log('data: ', data);
     const [scrolled, setScrolled] = useState(false);
 
@@ -9,6 +9,17 @@ function Nav({ data }) {
     function setHeaderHeight(data) {
         headerHeightRef.current = data;
         _setHeaderHeight(data);
+    }
+
+    const [isMobile, _setIsMobile] = useState(false);
+    const isMobileRef = useRef(isMobile);
+    function setIsMobile(data) {
+        isMobileRef.current = data;
+        _setIsMobile(data);
+    }
+
+    function checkIsMobile() {
+        setIsMobile(window.innerWidth < 450);
     }
 
     let lastScrollTop = useRef(0);
@@ -30,8 +41,10 @@ function Nav({ data }) {
 
     function handleClick(e) {
         e.preventDefault();
-        let top = document.getElementById(e.target.getAttribute('href').replace('#', '')).offsetTop;
-        window.scrollTo({ top, behavior: 'smooth' });
+        let top = document.getElementById(
+            e.target.getAttribute('href').replace('#', '')
+        ).offsetTop;
+        window.scrollTo({top, behavior: 'smooth'});
     }
 
     useEffect(() => {
@@ -43,16 +56,24 @@ function Nav({ data }) {
         };
     }, [handleScroll]);
 
-    console.log('data.title.split(): ', data.title.split(' '));
+    useEffect(() => {
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
     return (
         <header className={scrolled ? 'fixed' : ''}>
             <div className="wrapper">
                 <h1>
                     <a href="/" title="">
-                        <span>{data.title.split(' ')[0]}</span> {data.title.split(' ').slice(1).join(' ')}
+                        <span>{data.title.split(' ')[0]}</span>{' '}
+                        {data.title.split(' ').slice(1).join(' ')}
                     </a>
                 </h1>
-                <nav>
+                <nav className={isMobile ? 'mobile' : ''}>
                     <ul>
                         <li>
                             <a onClick={handleClick} href="#header" title="">
@@ -80,13 +101,29 @@ function Nav({ data }) {
                             </a>
                         </li>
                         <li>
-                            <a href={data.socialmedia.facebook} title="Facebook" target="_blank" rel="noreferrer">
-                                <i className="fa fa-facebook" aria-label="Facebook" />
+                            <a
+                                href={data.socialmedia.facebook}
+                                title="Facebook"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i
+                                    className="fa fa-facebook"
+                                    aria-label="Facebook"
+                                />
                             </a>
                         </li>
                         <li>
-                            <a href={data.socialmedia.tripadvisor} title="TripAdvisor" target="_blank" rel="noreferrer">
-                                <i className="fa fa-tripadvisor" aria-label="TripAdvisor" />
+                            <a
+                                href={data.socialmedia.tripadvisor}
+                                title="TripAdvisor"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i
+                                    className="fa fa-tripadvisor"
+                                    aria-label="TripAdvisor"
+                                />
                             </a>
                         </li>
                     </ul>

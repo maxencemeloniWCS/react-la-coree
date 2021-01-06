@@ -1,3 +1,7 @@
+section {
+    overflow: hidden;
+}
+
 section#menu {
     background: #151515;
 }
@@ -31,10 +35,10 @@ button.displayMenuButton {
     opacity: 0.8;
     color: #f8f8f8;
     border: 1px solid #f8f8f8;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 20px;
-    width: 20%;
+    margin-bottom: 20px;
+    padding: 6px;
+    font-size: 18px;
+    width: 15%;
 }
 
 button.displayMenuButton:hover {
@@ -131,6 +135,10 @@ section#menu .wrapper div > ul > li ul li > span:last-child {
 }
 
 @media screen and (max-width: 768px) {
+    button.displayMenuButton {
+        width: 40%;
+    }
+
     section#menu .wrapper div {
         flex: 1 1 100%;
         margin-right: 0;

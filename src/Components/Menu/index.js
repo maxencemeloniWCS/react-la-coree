@@ -9,6 +9,10 @@ function Menu() {
     const handleClick = (e) => {
         e.preventDefault();
         setIsOpen((prev) => !prev);
+        let top = document.getElementById(
+            e.target.getAttribute('link').replace('#', '')
+        ).offsetTop;
+        window.scrollTo({top, behavior: 'smooth'});
     };
 
     const data = useStaticQuery(graphql`
@@ -40,6 +44,7 @@ function Menu() {
                     type="button"
                     className="displayMenuButton"
                     onClick={handleClick}
+                    link="#menu"
                 >
                     {isOpen ? 'Masquer le menu' : 'Afficher le menu'}
                 </button>

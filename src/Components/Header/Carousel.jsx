@@ -6,13 +6,12 @@ function HeaderCarousel({ data }) {
     return (
         <div id="slideshow">
             <Carousel
-                autoPlay={true}
+                autoPlay={false}
                 infiniteLoop={true}
                 interval={5000}
                 showThumbs={false}
                 showStatus={false}
                 showIndicators={false}
-                dynamicHeight={true}
             >
                 {data.slider.map(item => {
                     return (
@@ -20,7 +19,6 @@ function HeaderCarousel({ data }) {
                             <img
                                 src={process.env.GATSBY_API_URL + item.image[0].url}
                                 alt={item.image[0].name}
-                                style={{ height: 'inherit' }}
                             />
                             <div className="slider-title-container">
                                 <p className="slider-title">{item.title}</p>

@@ -35,8 +35,8 @@ function Header() {
         <section id="header">
             <div id="header-elems">
                 <Nav data={data.strapiSettings} />
-                <ContactBar data={data.strapiSettings} />
             </div>
+            <ContactBar data={data.strapiSettings} />
             <Carousel data={data.strapiSlideshow} />
         </section>
     );

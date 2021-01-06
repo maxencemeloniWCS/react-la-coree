@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from './Nav';
 import ContactBar from './ContactBar';
-import './Head.css';
+import './Header.css';
 import {graphql, useStaticQuery} from 'gatsby';
-import HeadCarousel from './HeadCarousel';
+import Carousel from './Carousel';
 
 function Header() {
     const data = useStaticQuery(graphql`
@@ -35,9 +35,9 @@ function Header() {
         <section id="header">
             <div id="header-elems">
                 <Nav data={data.strapiSettings} />
-                <ContactBar data={data.strapiSettings} />
             </div>
-            <HeadCarousel data={data.strapiSlideshow} />
+            <ContactBar data={data.strapiSettings} />
+            <Carousel data={data.strapiSlideshow} />
         </section>
     );
 }

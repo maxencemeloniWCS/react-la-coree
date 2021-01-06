@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/style.css';
-import Header from '../Components/Head';
+import Header from '../Components/Header';
 import About from '../Components/About';
 import Menu from '../Components/Menu';
 import Gallery from '../Components/Gallery';

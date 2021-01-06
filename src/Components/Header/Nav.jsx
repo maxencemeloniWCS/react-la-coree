@@ -27,7 +27,7 @@ function Nav({data}) {
     }
 
     function checkIsMobile() {
-        setIsMobile(window.innerWidth < 450);
+        setIsMobile(window.innerWidth <= 768);
     }
 
     let lastScrollTop = useRef(0);

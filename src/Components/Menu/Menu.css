@@ -1,13 +1,42 @@
 section#menu {
     background: #151515;
-    height: 600px;
 }
 
 section#menu.open {
     height: auto;
 }
 section#menu.close {
+    height: 600px;
+}
 
+div.gradientBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(21, 21, 21, 0) 0%,
+        rgba(21, 21, 21, 1) 77%
+    );
+}
+
+button.displayMenuButton {
+    background: #151515;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    margin-bottom: 10px;
+    font-size: 25px;
+    width: 20%;
+}
+
+button.displayMenuButton:focus {
+    outline: none;
 }
 
 section#menu .wrapper {
@@ -21,7 +50,6 @@ section#menu .wrapper div {
     flex: 1 1 40%;
     margin-right: 80px;
     margin-bottom: 25px;
-
 }
 
 section#menu h3 {
@@ -38,7 +66,7 @@ section#menu h3 span {
 section#menu .wrapper div > ul {
 }
 section#menu .wrapper div:nth-child(2n) {
-    margin-right:0;
+    margin-right: 0;
 }
 
 /*section#menu .wrapper div > ul:nth-child(3) {
@@ -50,14 +78,12 @@ section#menu .wrapper div > ul > li {
     display: flex;
 }
 section#menu .wrapper div > ul > li.category-title {
-
 }
 section#menu .wrapper div > ul > li.category-title h4 {
     color: #dc3333;
     margin-bottom: 15px;
     min-height: 47px;
 }
-
 
 section#menu .wrapper div:nth-last-child(2) > li.category-title h4 {
     min-height: 0;
@@ -75,8 +101,6 @@ section#menu .wrapper div > ul > li ul {
 section#menu .wrapper div > ul > li ul li {
     margin-bottom: 10px;
 }
-
-
 
 section#menu .wrapper div > ul > li ul li {
 }
@@ -101,25 +125,24 @@ section#menu .wrapper div > ul > li ul li > span:last-child {
     }
 
     section#menu .wrapper div:nth-child(2n) {
-        margin-right:0;
+        margin-right: 0;
     }
 
     section#menu .wrapper div:nth-child(2) {
-        order: 4
+        order: 4;
     }
     section#menu .wrapper div:nth-child(3) {
-        order: 2
+        order: 2;
     }
     section#menu .wrapper div:nth-child(4) {
-        order: 5
+        order: 5;
     }
     section#menu .wrapper div:nth-child(5) {
-        order: 3
+        order: 3;
     }
 }
 
 @media screen and (max-width: 450px) {
-
     section#menu .wrapper div > ul {
     }
 }

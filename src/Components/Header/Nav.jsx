@@ -25,9 +25,9 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
         _setIsMobile(data);
     }
 
-    function checkIsMobile() {
+    const checkIsMobile = useCallback(() => {
         setIsMobile(window.innerWidth <= 768);
-    }
+    }, []);
 
     let lastScrollTop = useRef(0);
 
@@ -76,7 +76,7 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
-    }, []);
+    }, [checkIsMobile]);
 
     return (
         <header className={scrolled ? 'fixed' : ''}>

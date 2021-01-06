@@ -1,6 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
+import React, {useEffect, useState, useRef, useCallback} from 'react';
+import {useStaticQuery, graphql} from 'gatsby';
+import {
+    CarouselProvider,
+    Slider,
+    Slide,
+    ButtonBack,
+    ButtonNext,
+    Image,
+} from 'pure-react-carousel';
 import './Gallery.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -30,9 +37,9 @@ function Gallery() {
         _setIsMobile(data);
     }
 
-    function checkIsMobile() {
+    const checkIsMobile = useCallback(() => {
         setIsMobile(window.innerWidth < 960);
-    }
+    }, []);
 
     useEffect(() => {
         checkIsMobile();
@@ -40,7 +47,7 @@ function Gallery() {
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
-    }, []);
+    }, [checkIsMobile]);
 
     return (
         <section id="gallery">
@@ -57,7 +64,12 @@ function Gallery() {
                     <>
                         {data.strapiGallery.slider.map((img, i) => (
                             <Slide index={i} key={i}>
-                                <Image src={process.env.GATSBY_API_URL + img.image[0].formats.small.url} />
+                                <Image
+                                    src={
+                                        process.env.GATSBY_API_URL +
+                                        img.image[0].formats.small.url
+                                    }
+                                />
                                 <p>{img.title ?? ''}</p>
                             </Slide>
                         ))}

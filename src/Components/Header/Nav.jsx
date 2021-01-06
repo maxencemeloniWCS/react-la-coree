@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect, useCallback} from 'react';
 import MobileOverlay from '../MobileOverlay';
 
 function Nav({data, modalIsOpen, setModalIsOpen}) {
-    console.log('data: ', data);
     const [scrolled, setScrolled] = useState(false);
 
     const [isOpen, setIsOpen] = useState(false);

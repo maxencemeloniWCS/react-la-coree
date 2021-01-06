@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import ReactGA from 'react-ga';
+
 import '../assets/css/style.css';
 import Header from '../Components/Header';
 import About from '../Components/About';
@@ -8,7 +10,6 @@ import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import SEO from '../seo';
 
-import ReactGA from 'react-ga';
 const trackingId = "UA-126844155-5";
 ReactGA.initialize(trackingId);
 
@@ -17,15 +18,15 @@ export default function Home() {
 
     return (
         <div className="App">
-            <SEO />
-            <Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+            <SEO/>
+            <Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
             <main>
-                <About />
-                <Menu />
-                <Gallery />
-                <Contact />
+                <About/>
+                <Menu/>
+                <Gallery/>
+                <Contact/>
             </main>
-            <Footer modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+            <Footer modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import MobileOverlay from '../MobileOverlay';
 
-function Nav({data}) {
+function Nav({data, modalIsOpen, setModalIsOpen}) {
     console.log('data: ', data);
     const [scrolled, setScrolled] = useState(false);
 
@@ -55,6 +55,12 @@ function Nav({data}) {
         ).offsetTop;
         window.scrollTo({top, behavior: 'smooth'});
     }
+
+    const openModal = (e) => {
+        e.preventDefault();
+        setIsOpen(false);
+        setModalIsOpen(true);
+    };
 
     useEffect(() => {
         setHeaderHeight(document.getElementById('header').offsetHeight);
@@ -133,6 +139,8 @@ function Nav({data}) {
                                             Nous contacter
                                         </a>
                                     </li>
+                                </ul>
+                                <ul className="otherAppLink">
                                     <li>
                                         <a
                                             href={data.socialmedia.facebook}
@@ -157,6 +165,22 @@ function Nav({data}) {
                                                 className="fa fa-tripadvisor"
                                                 aria-label="TripAdvisor"
                                             />
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#copyright" title="">
+                                            Copyright blabla
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#mentions-legales"
+                                            onClick={openModal}
+                                            title=""
+                                        >
+                                            Mentions légales
                                         </a>
                                     </li>
                                 </ul>

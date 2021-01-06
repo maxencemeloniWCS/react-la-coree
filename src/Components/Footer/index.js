@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, {useState} from 'react';
+import {useStaticQuery, graphql} from 'gatsby';
 import Modal from 'react-modal';
 import Markdown from 'react-markdown';
 import './Footer.css';
 
-function Footer() {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+function Footer({modalIsOpen, setModalIsOpen}) {
     const data = useStaticQuery(graphql`
         {
             strapiLegalNotice {
@@ -13,7 +12,7 @@ function Footer() {
             }
         }
     `);
-    const openModal = e => {
+    const openModal = (e) => {
         e.preventDefault();
         setModalIsOpen(true);
     };
@@ -26,7 +25,11 @@ function Footer() {
                 <p>Copyright blabla</p>
                 <ul>
                     <li>
-                        <a href="#mentions-legales" onClick={openModal} title="">
+                        <a
+                            href="#mentions-legales"
+                            onClick={openModal}
+                            title=""
+                        >
                             Mentions légales
                         </a>
                     </li>
@@ -40,7 +43,9 @@ function Footer() {
                         overlayClassName="Overlay"
                     >
                         <div onClick={closeModal} role="alertdialog">
-                            <Markdown>{data.strapiLegalNotice.legalnotice}</Markdown>
+                            <Markdown>
+                                {data.strapiLegalNotice.legalnotice}
+                            </Markdown>
                         </div>
                     </Modal>
                 </div>

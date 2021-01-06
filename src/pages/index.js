@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../assets/css/style.css';
 import Header from '../Components/Header';
 import About from '../Components/About';
@@ -10,21 +10,23 @@ import Footer from '../Components/Footer';
 import SEO from '../seo';
 
 import ReactGA from 'react-ga';
-const trackingId = "UA-126844155-5"; // Replace with your Google Analytics tracking ID
+const trackingId = 'UA-126844155-5'; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 
 export default function Home() {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
     return (
         <div className="App">
             <SEO />
-            <Header />
+            <Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
             <main>
                 <About />
                 <Menu />
                 <Gallery />
                 <Contact />
             </main>
-            <Footer />
+            <Footer modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
         </div>
     );
 }

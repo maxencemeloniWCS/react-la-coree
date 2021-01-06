@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import './Gallery.css';
@@ -22,13 +22,33 @@ function Gallery() {
         }
     `);
 
+    const [isMobile, _setIsMobile] = useState(false);
+    const isMobileRef = useRef(isMobile);
+
+    function setIsMobile(data) {
+        isMobileRef.current = data;
+        _setIsMobile(data);
+    }
+
+    function checkIsMobile() {
+        setIsMobile(window.innerWidth < 960);
+    }
+
+    useEffect(() => {
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
     return (
         <section id="gallery">
             <CarouselProvider
                 naturalSlideWidth={10}
                 naturalSlideHeight={10}
                 totalSlides={data.strapiGallery.slider.length}
-                visibleSlides={4}
+                visibleSlides={isMobile ? 2 : 4}
                 isPlaying={true}
                 infinite={true}
                 interval={5000}

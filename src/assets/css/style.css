@@ -349,7 +349,7 @@ section#gallery .gallery-arrow {
     color: #f8f8f8;
     opacity: 0.7;
     left: 50px;
-    top: 40%;
+    top: 45%;
     z-index: 1;
     cursor: pointer;
     border: 0;
@@ -359,6 +359,10 @@ section#gallery .gallery-arrow {
 
 section#gallery .gallery-arrow:hover {
     opacity: 1;
+}
+
+section#gallery .gallery-arrow:focus {
+    outline: none;
 }
 
 section#gallery .gallery-arrow i {

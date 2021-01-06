@@ -38,13 +38,11 @@ section#about #about-left p {
 
 section#about #about-right {
     width: 300px;
-    height: 300px;
 }
 section#about #about-right img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    max-height: 450px;
     border-style: solid;
     border-width: 2px;
     border-color: #151515;
@@ -57,6 +55,11 @@ section#about #about-right img {
 }
 
 @media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
     section#about .wrapper > div {
         flex-direction: column;
     }
@@ -67,15 +70,17 @@ section#about #about-right img {
 
     section#about #about-right {
         margin-top: 50px;
-        width: 250px;
-        height: 250px;
+        width: 100%;
+    }
+    section#about #about-right img {
+        width: 70%;
     }
 }
 
-@media screen and (max-width: 768px) {
-}
-
 @media screen and (max-width: 450px) {
+    section#about #about-right img {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 380px) {

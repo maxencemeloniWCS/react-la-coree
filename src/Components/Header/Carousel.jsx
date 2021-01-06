@@ -6,7 +6,7 @@ function HeaderCarousel({ data }) {
     return (
         <div id="slideshow">
             <Carousel
-                autoPlay={false}
+                autoPlay={true}
                 infiniteLoop={true}
                 interval={5000}
                 showThumbs={false}

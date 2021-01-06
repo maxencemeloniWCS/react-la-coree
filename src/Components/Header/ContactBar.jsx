@@ -31,7 +31,7 @@ function ContactBar({data}) {
                         <i className="fa fa-map" />
                         <div>
                             <span>
-                                <a href="#contact" title="">
+                                <a href="#maps" title="">
                                     {data.address}
                                 </a>
                             </span>

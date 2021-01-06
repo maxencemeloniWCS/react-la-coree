@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 
-function Nav() {
+function Nav({data}) {
+    console.log('data: ', data);
     const [scrolled, setScrolled] = useState(false);
 
     const [headerHeight, _setHeaderHeight] = useState(0);
@@ -68,7 +69,8 @@ function Nav() {
             <div className="wrapper">
                 <h1>
                     <a href="/" title="">
-                        <span>La</span> Corée
+                        <span>{data.title.split(' ')[0]}</span>{' '}
+                        {data.title.split(' ').slice(1).join(' ')}
                     </a>
                 </h1>
                 <nav className={isMobile ? 'mobile' : ''}>
@@ -100,7 +102,7 @@ function Nav() {
                         </li>
                         <li>
                             <a
-                                href="https://www.facebook.com/lacoreelyon/"
+                                href={data.socialmedia.facebook}
                                 title="Facebook"
                                 target="_blank"
                                 rel="noreferrer"
@@ -113,7 +115,7 @@ function Nav() {
                         </li>
                         <li>
                             <a
-                                href="https://www.tripadvisor.fr/Restaurant_Review-g187265-d3436536-Reviews-La_Coree-Lyon_Rhone_Auvergne_Rhone_Alpes.html/"
+                                href={data.socialmedia.tripadvisor}
                                 title="TripAdvisor"
                                 target="_blank"
                                 rel="noreferrer"

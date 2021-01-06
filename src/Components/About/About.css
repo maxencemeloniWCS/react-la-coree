@@ -29,11 +29,13 @@ section#about #about-left h3 {
     width: 100%;
     text-align: center;
     color: #151515;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 section#about #about-left p {
-    text-align: center;
+    text-align: left;
+    margin-bottom: 7px;
+    line-height: 18px;
 }
 
 section#about #about-right {

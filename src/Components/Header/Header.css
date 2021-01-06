@@ -24,7 +24,16 @@ section div#slideshow {
 }
 
 
-section div#slideshow #carousel .carousel.carousel-slider {}
+section div#slideshow,
+section div#slideshow .carousel-root,
+section div#slideshow .carousel-root .carousel.carousel-slider,
+section div#slideshow .carousel-root .carousel.carousel-slider .slider-wrapper,
+section div#slideshow .carousel-root .carousel.carousel-slider .slider-wrapper ul,
+section div#slideshow .carousel-root .carousel.carousel-slider .slider-wrapper ul li div,
+section div#slideshow .carousel-root .carousel.carousel-slider .slider-wrapper ul li {
+    max-height: inherit;
+}
+
 section div#slideshow #carousel .carousel.carousel-slider img {
     object-fit: cover;
 }

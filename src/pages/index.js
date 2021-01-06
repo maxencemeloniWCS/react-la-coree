@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import '../assets/css/style.css';
 import Header from '../Components/Head';
 import About from '../Components/About';
@@ -16,15 +16,15 @@ ReactGA.initialize(trackingId);
 export default function Home() {
     return (
         <div className="App">
-            <SEO/>
-            <Header/>
+            <SEO />
+            <Header />
             <main>
-                <About/>
-                <Menu/>
-                <Gallery/>
-                <Contact/>
+                <About />
+                <Menu />
+                <Gallery />
+                <Contact />
             </main>
-            <Footer/>
-            <MobileOverlay/>
-        </div>)
+            <Footer />
+        </div>
+    );
 }

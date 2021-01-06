@@ -104,12 +104,15 @@ section#contact #contact-form #form-contact p#form-error {
 
 @media screen and (max-width: 768px) {
     section#contact {
+        display: flex;
+        flex-direction: column;
         height: auto;
     }
 
     section#contact #maps {
         height: 300px;
         position: relative;
+        order: 2;
     }
 
     section#contact #contact-form {
@@ -117,10 +120,17 @@ section#contact #contact-form #form-contact p#form-error {
         position: relative;
         width: 100%;
         left: 0;
+        order: 1;
+        background: #151515;
     }
 
     section#contact #contact-form h3 {
         font-size: 24px;
+    }
+
+    section#contact #contact-form #form-contact button:hover {
+        border-color: #dc3333;
+        color: #dc3333;
     }
 }
 

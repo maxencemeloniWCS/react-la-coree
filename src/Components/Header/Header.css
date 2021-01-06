@@ -54,7 +54,7 @@ section div#slideshow div.slider-title-container p.slider-title {
     text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
 section div#slideshow div.slider-title-container p.slider-subtitle {
-    color: #fff;
+    color: #f8f8f8;
     font-size: 25px;
     text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
@@ -149,7 +149,7 @@ section#header div#header-bottom {
     bottom: 30px;
     background: rgba(0, 0, 0, 0.3);
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
 }
 
 section#header div#header-bottom div.header-card {
@@ -188,6 +188,39 @@ section#header div#header-bottom div.header-card div span {
 section#header div#header-bottom div.header-card div span a {
 }
 
+
+section#header div#header-bottom div.header-card#card-planning {
+    position: relative;
+}
+section#header div#header-bottom div.header-card#card-planning > div {
+    cursor: pointer;
+}
+
+section#header div#header-bottom div.header-card#card-planning > div:hover div span:first-child {
+    color: #dc3333;
+}
+section#header div#header-bottom div.header-card#card-planning #planning {
+    position: absolute;
+    bottom: 52px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    display: block;
+}
+section#header div#header-bottom div.header-card#card-planning #planning p {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #f8f8f8;
+}
+section#header div#header-bottom div.header-card#card-planning #planning p strong {
+    color: #dc3333;
+    width: 80px;
+    display: inline-block;
+}
+
 #hamburger {
     display: none;
 }
@@ -212,7 +245,7 @@ section#header div#header-bottom div.header-card div span a {
         margin: 0 0 5px;
         border-radius: 2px;
         -webkit-background-clip: padding-box;
-        background: #fff;
+        background: #f8f8f8;
     }
     .nav-mobile-overlay {
         opacity: 0.5;
@@ -303,6 +336,10 @@ section#header div#header-bottom div.header-card div span a {
     section#header div#header-bottom div.header-card:nth-child(3) {
         display: none;
     }
+    section#header div#header-bottom div.header-card#card-planning #planning {
+        bottom: 43px;
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
 @media screen and (max-width: 450px) {
     section#header div#header-bottom div.header-card {
@@ -318,8 +355,14 @@ section#header div#header-bottom div.header-card div span a {
     section div#slideshow div.slider-title-container p.slider-subtitle {
         font-size: 15px;
     }
-    h1 {
-        font-size: 25px;
+
+    section#header div#header-bottom div.header-card#card-planning #planning p {
+        margin-bottom: 2px;
+        font-size: 13px;
+    }
+
+    section#header div#header-bottom {
+        z-index: 3;
     }
 }
 @media screen and (max-width: 380px) {

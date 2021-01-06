@@ -49,6 +49,10 @@ h4 {
     padding: 20px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .flex-rows-break {
     flex-basis: 100%;
     width: 0;
@@ -93,6 +97,9 @@ main section {
 }
 
 @media screen and (max-width: 450px) {
+    h1 {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 380px) {

@@ -58,7 +58,7 @@ function Gallery() {
                         {data.strapiGallery.slider.map((img, i) => (
                             <Slide index={i} key={i}>
                                 <Image src={process.env.GATSBY_API_URL + img.image[0].formats.small.url} />
-                                <p>{img.title}</p>
+                                <p>{img.title ?? ''}</p>
                             </Slide>
                         ))}
                     </>

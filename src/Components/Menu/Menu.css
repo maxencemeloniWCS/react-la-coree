@@ -1,14 +1,19 @@
-section#menuClose {
-    background: #151515;
-    height: 600px;
-}
-
-section#menuOpen {
+section#menu {
     background: #151515;
 }
 
 section#menu .wrapper {
     flex-wrap: wrap;
+}
+section#menu .wrapper div {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 40%;
+    margin-right: 80px;
+    margin-bottom: 25px;
+
 }
 
 section#menu h3 {
@@ -22,56 +27,53 @@ section#menu h3 span {
     color: #dc3333;
 }
 
-section#menu .wrapper > ul {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1 1 40%;
-    margin-right: 80px;
-    margin-bottom: 25px;
+section#menu .wrapper div > ul {
 }
-section#menu .wrapper > ul:nth-child(2n) {
-    margin-right: 0;
+section#menu .wrapper div:nth-child(2n) {
+    margin-right:0;
 }
 
-/*section#menu .wrapper > ul:nth-child(3) {
+/*section#menu .wrapper div > ul:nth-child(3) {
     margin-right: 0;
 }*/
 
-section#menu .wrapper > ul > li {
+section#menu .wrapper div > ul > li {
     width: 100%;
     display: flex;
 }
-section#menu .wrapper > ul > li.category-title {
+section#menu .wrapper div > ul > li.category-title {
+
 }
-section#menu .wrapper > ul > li.category-title h4 {
+section#menu .wrapper div > ul > li.category-title h4 {
     color: #dc3333;
     margin-bottom: 15px;
     min-height: 47px;
 }
 
-section#menu .wrapper > ul:nth-last-child(2) > li.category-title h4 {
+
+section#menu .wrapper div:nth-last-child(2) > li.category-title h4 {
     min-height: 0;
 }
 
-section#menu .wrapper > ul > li.category-title h4 span {
+section#menu .wrapper div > ul > li.category-title h4 span {
     width: 100%;
     display: block;
     font-weight: 400;
 }
 
-section#menu .wrapper > ul > li ul {
+section#menu .wrapper div > ul > li ul {
     width: 100%;
 }
-section#menu .wrapper > ul > li ul li {
+section#menu .wrapper div > ul > li ul li {
     margin-bottom: 10px;
 }
 
-section#menu .wrapper > ul > li ul li {
+
+
+section#menu .wrapper div > ul > li ul li {
 }
 
-section#menu .wrapper > ul > li ul li > span {
+section#menu .wrapper div > ul > li ul li > span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,36 +81,37 @@ section#menu .wrapper > ul > li ul li > span {
     color: #d4d4d4;
 }
 
-section#menu .wrapper > ul > li ul li > span:last-child {
+section#menu .wrapper div > ul > li ul li > span:last-child {
     font-weight: 400;
     padding-right: 30px;
 }
 
 @media screen and (max-width: 768px) {
-    section#menu .wrapper > ul {
+    section#menu .wrapper div {
         flex: 1 1 100%;
         margin-right: 0;
     }
 
-    section#menu .wrapper > ul:nth-child(2n) {
-        margin-right: 0;
+    section#menu .wrapper div:nth-child(2n) {
+        margin-right:0;
     }
 
-    section#menu .wrapper > ul:nth-child(2) {
-        order: 4;
+    section#menu .wrapper div:nth-child(2) {
+        order: 4
     }
-    section#menu .wrapper > ul:nth-child(3) {
-        order: 2;
+    section#menu .wrapper div:nth-child(3) {
+        order: 2
     }
-    section#menu .wrapper > ul:nth-child(4) {
-        order: 5;
+    section#menu .wrapper div:nth-child(4) {
+        order: 5
     }
-    section#menu .wrapper > ul:nth-child(5) {
-        order: 3;
+    section#menu .wrapper div:nth-child(5) {
+        order: 3
     }
 }
 
 @media screen and (max-width: 450px) {
-    section#menu .wrapper > ul {
+
+    section#menu .wrapper div > ul {
     }
 }

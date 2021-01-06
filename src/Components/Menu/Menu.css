@@ -22,8 +22,12 @@ section#menu .wrapper > ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1 1 50%;
+    flex: 1 1 30%;
+    margin-right: 35px;
+}
 
+section#menu .wrapper > ul:nth-child(3) {
+    margin-right: 0;
 }
 
 section#menu .wrapper > ul > li {
@@ -37,6 +41,7 @@ section#menu .wrapper > ul > li.category-title {
 section#menu .wrapper > ul > li.category-title h4 {
     color: #dc3333;
     margin-bottom: 15px;
+    min-height: 75px;
 }
 section#menu .wrapper > ul > li.category-title h4 span {
     width: 100%;
@@ -49,23 +54,19 @@ section#menu .wrapper > ul > li ul {}
 section#menu .wrapper > ul > li ul li {
     margin-bottom: 5px;
 }
-section#menu .wrapper > ul > li ul li {}
+section#menu .wrapper > ul > li ul li {
+}
 
 section#menu .wrapper > ul > li ul li > span {
-    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
     color: #d4d4d4;
 }
 
-section#menu .wrapper > ul > li ul li > span strong {
-    display: block;
-    margin-bottom: 5px;
+section#menu .wrapper  > ul > li ul li > span:last-child {
+    font-weight: 400;
 }
 
-section#menu .wrapper  > ul > li ul li > span span {
-}
-
-section#menu .wrapper  > ul > li ul li  > span.price {
-    margin-left: auto;
-    font-size: 18px;
-}
 

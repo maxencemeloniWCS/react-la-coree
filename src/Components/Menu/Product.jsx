@@ -4,10 +4,10 @@ function Product({product}) {
     return (
         <li>
             <span>
-                <strong>{product.title}</strong>
-                <span>{product.description}</span>
+                <span>{product.title}</span>
+                <span className="price">{product.price} €</span>
             </span>
-            <span className="price">{product.price} €</span>
+            <span>{product.description}</span>
         </li>
     )
 }

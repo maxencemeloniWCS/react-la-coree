@@ -2,7 +2,9 @@ import React from "react";
 import Product from "./Product";
 
 function Categories({categories}) {
-    return categories.map((category, i) =>
+    return (
+        <>
+            {categories.map((category, i) =>
                 (<ul key={i}>
                     <li className="category-title">
                         <h4>{category.title} <span>{category.description}</span></h4>
@@ -15,7 +17,10 @@ function Categories({categories}) {
                         </ul>
                     </li>
                 </ul>)
-            )
+            )}
+            <ul><li>{' '}</li></ul>
+        </>
+    )
 }
 
 export default Categories;

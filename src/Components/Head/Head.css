@@ -1,0 +1,76 @@
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1080px) {
+    section div#slideshow div.slider-title-container p.slider-title {
+        margin-top: -100px;
+        font-size: 35px;
+    }
+    section#header {
+        height: 95vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    section div#slideshow div.slider-title-container p.slider-title {
+        margin-top: -100px;
+        font-size: 30px;
+    }
+    section div#slideshow div.slider-title-container p.slider-subtitle {
+        font-size: 20px;
+    }
+    section#header {
+        height: 90vh;
+    }
+    section#header div#header-bottom div.header-card {
+        width: 35%;
+        align-self: center;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    section#header header nav ul li a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 450px) {
+    section#header {
+        height: 90vh;
+    }
+    div#header-bottom div.contactBar {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    section#header div#header-bottom {
+        height: 200px;
+        bottom: 30px;
+        background: #151515;
+    }
+    section#header div#header-bottom div.header-card {
+        font-size: 12px;
+        border: 0;
+    }
+    section div#slideshow div.slider-title-container p.slider-title {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    section div#slideshow div.slider-title-container p.slider-subtitle {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    section#header header nav.mobile {
+        display: none;
+    }
+}
+@media screen and (max-width: 380px) {
+    section#header {
+        height: 80vh;
+    }
+    section div#slideshow div.slider-title-container p.slider-title {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    section div#slideshow div.slider-title-container p.slider-subtitle {
+        font-size: 10px;
+    }
+}

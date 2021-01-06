@@ -1,8 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import ContactBar from './ContactBar';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import {Carousel} from 'react-responsive-carousel';
+import './Head.css';
 import {graphql, useStaticQuery} from 'gatsby';
 import HeadCarousel from './HeadCarousel';
 

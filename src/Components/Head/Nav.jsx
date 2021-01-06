@@ -3,12 +3,22 @@ import React, {useState, useRef, useEffect, useCallback} from 'react';
 function Nav() {
     const [scrolled, setScrolled] = useState(false);
 
-
     const [headerHeight, _setHeaderHeight] = useState(0);
     const headerHeightRef = useRef(headerHeight);
     function setHeaderHeight(data) {
         headerHeightRef.current = data;
         _setHeaderHeight(data);
+    }
+
+    const [isMobile, _setIsMobile] = useState(false);
+    const isMobileRef = useRef(isMobile);
+    function setIsMobile(data) {
+        isMobileRef.current = data;
+        _setIsMobile(data);
+    }
+
+    function checkIsMobile() {
+        setIsMobile(window.innerWidth < 450);
     }
 
     let lastScrollTop = useRef(0);
@@ -45,64 +55,72 @@ function Nav() {
         };
     }, [handleScroll]);
 
+    useEffect(() => {
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
     return (
         <header className={scrolled ? 'fixed' : ''}>
-            <div className="wrapper">
+            <div className='wrapper'>
                 <h1>
-                    <a href="/" title="">
+                    <a href='/' title=''>
                         <span>La</span> Corée
                     </a>
                 </h1>
-                <nav>
+                <nav className={isMobile ? 'mobile' : ''}>
                     <ul>
                         <li>
-                            <a onClick={handleClick} href="#header" title="">
+                            <a onClick={handleClick} href='#header' title=''>
                                 Accueil
                             </a>
                         </li>
                         <li>
-                            <a onClick={handleClick} href="#about" title="">
+                            <a onClick={handleClick} href='#about' title=''>
                                 À propos
                             </a>
                         </li>
                         <li>
-                            <a onClick={handleClick} href="#menu" title="">
+                            <a onClick={handleClick} href='#menu' title=''>
                                 Menu
                             </a>
                         </li>
                         <li>
-                            <a onClick={handleClick} href="#gallery" title="">
+                            <a onClick={handleClick} href='#gallery' title=''>
                                 Galerie
                             </a>
                         </li>
                         <li>
-                            <a onClick={handleClick} href="#contact" title="">
+                            <a onClick={handleClick} href='#contact' title=''>
                                 Nous contacter
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://www.facebook.com/lacoreelyon/"
-                                title="Facebook"
-                                target="_blank"
-                                rel="noreferrer"
+                                href='https://www.facebook.com/lacoreelyon/'
+                                title='Facebook'
+                                target='_blank'
+                                rel='noreferrer'
                             >
                                 <i
-                                    className="fa fa-facebook"
-                                    aria-label="Facebook"
+                                    className='fa fa-facebook'
+                                    aria-label='Facebook'
                                 />
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://www.tripadvisor.fr/Restaurant_Review-g187265-d3436536-Reviews-La_Coree-Lyon_Rhone_Auvergne_Rhone_Alpes.html/"
-                                title="TripAdvisor"
-                                target="_blank"
-                                rel="noreferrer"
+                                href='https://www.tripadvisor.fr/Restaurant_Review-g187265-d3436536-Reviews-La_Coree-Lyon_Rhone_Auvergne_Rhone_Alpes.html/'
+                                title='TripAdvisor'
+                                target='_blank'
+                                rel='noreferrer'
                             >
                                 <i
-                                    className="fa fa-tripadvisor"
-                                    aria-label="TripAdvisor"
+                                    className='fa fa-tripadvisor'
+                                    aria-label='TripAdvisor'
                                 />
                             </a>
                         </li>

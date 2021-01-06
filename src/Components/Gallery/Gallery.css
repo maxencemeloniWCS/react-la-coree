@@ -113,6 +113,9 @@ section#gallery .carousel__inner-slide p {
 }
 
 @media screen and (max-width: 960px) {
+    section#gallery {
+        padding: 90px 0;
+    }
 }
 @media screen and (max-width: 768px) {
 }

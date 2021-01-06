@@ -54,172 +54,6 @@ h4 {
     width: 0;
 }
 
-section#header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: block;
-}
-
-section div#header-elems {
-    position: absolute;
-    width: 100%;
-    height: inherit;
-    z-index: 1;
-}
-
-section div#slideshow {
-    width: 100%;
-    height: inherit;
-    z-index: 0;
-}
-
-section div#slideshow div.slider-title-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-section div#slideshow div.slider-title-container p.slider-title {
-    margin-top: -300px;
-    margin-bottom: 15px;
-    font-size: 35px;
-    color: #dc3333;
-    font-weight: 700;
-}
-section div#slideshow div.slider-title-container p.slider-subtitle {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-section#header header {
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-section#header header.fixed {
-    position: fixed;
-    background-color: #151515;
-}
-
-section#header header h1 {
-    align-self: center;
-    color: #f8f8f8;
-    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
-}
-
-section#header header h1 span {
-    color: #dc3333;
-}
-
-section#header header nav {
-    align-self: center;
-    margin-left: auto;
-}
-
-section#header header nav ul li {
-    display: inline;
-    margin-left: 15px;
-}
-
-section#header header nav ul li a {
-    font-size: 18px;
-    position: relative;
-}
-
-section#header header nav ul li a:before {
-    /*    content: '';
-      width: 0;
-      height: 2px;
-      background: #dc3333;
-      position: absolute;
-      left: 0;
-      top: 100%;
-      transition: all .5s ease-in;*/
-}
-
-section#header header nav ul li a.active,
-section#header header nav ul li a:hover {
-    color: #dc3333;
-}
-
-section#header header nav ul li a.active:before,
-section#header header nav ul li a::before {
-    width: 100%;
-    border-color: #dc3333;
-}
-
-section#header h2 {
-    position: absolute;
-    width: 100%;
-    top: 45%;
-    text-align: center;
-    color: #f8f8f8;
-}
-
-section#header h2 span:first-child {
-    color: #dc3333;
-    font-weight: 700;
-}
-
-section#header h2 span {
-    display: block;
-    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
-}
-
-/* TODO: trouver un nouveau nom */
-section#header div#header-bottom {
-    width: 100%;
-    height: 65px;
-    position: absolute;
-    bottom: 30px;
-    background: rgba(0, 0, 0, 0.3);
-    justify-content: space-between;
-}
-
-section#header div#header-bottom div.header-card {
-    width: 30%;
-    align-self: center;
-    display: flex;
-    border-right: 2px solid #dc3333;
-    padding-left: 30px;
-    justify-content: space-around;
-}
-
-section#header div#header-bottom div.header-card:last-child {
-    border: 0;
-}
-
-section#header div#header-bottom div.header-card > div {
-    display: flex;
-}
-
-section#header div#header-bottom div.header-card i {
-    align-self: center;
-    color: #dc3333;
-    font-size: 25px;
-    margin-right: 15px;
-}
-
-section#header div#header-bottom div.header-card div {
-    align-self: center;
-}
-
-section#header div#header-bottom div.header-card div span {
-    display: block;
-    color: #f8f8f8;
-}
-
-section#header div#header-bottom div.header-card div span a {
-}
 
 main {
     width: 100%;
@@ -242,8 +76,6 @@ main section {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-
-
 @media screen and (max-width: 1280px) {
 }
 
@@ -253,9 +85,6 @@ main section {
 @media screen and (max-width: 960px) {
     main section {
         padding: 50px 0;
-    }
-    section#gallery {
-        padding: 90px 0;
     }
 }
 

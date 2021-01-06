@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-function HeadCarousel({ data }) {
+function HeaderCarousel({ data }) {
     return (
         <div id="slideshow">
             <Carousel
@@ -34,4 +34,4 @@ function HeadCarousel({ data }) {
     );
 }
 
-export default HeadCarousel;
+export default HeaderCarousel;

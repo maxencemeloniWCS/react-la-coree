@@ -1,6 +1,7 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
-function Nav() {
+function Nav({ data }) {
+    console.log('data: ', data);
     const [scrolled, setScrolled] = useState(false);
 
     const [headerHeight, _setHeaderHeight] = useState(0);
@@ -40,10 +41,8 @@ function Nav() {
 
     function handleClick(e) {
         e.preventDefault();
-        let top = document.getElementById(
-            e.target.getAttribute('href').replace('#', '')
-        ).offsetTop;
-        window.scrollTo({top, behavior: 'smooth'});
+        let top = document.getElementById(e.target.getAttribute('href').replace('#', '')).offsetTop;
+        window.scrollTo({ top, behavior: 'smooth' });
     }
 
     useEffect(() => {
@@ -67,8 +66,8 @@ function Nav() {
         <header className={scrolled ? 'fixed' : ''}>
             <div className='wrapper'>
                 <h1>
-                    <a href='/' title=''>
-                        <span>La</span> Corée
+                    <a href="/" title="">
+                        <span>{data.title.split(' ')[0]}</span> {data.title.split(' ').slice(1).join(' ')}
                     </a>
                 </h1>
                 <nav className={isMobile ? 'mobile' : ''}>
@@ -99,29 +98,13 @@ function Nav() {
                             </a>
                         </li>
                         <li>
-                            <a
-                                href='https://www.facebook.com/lacoreelyon/'
-                                title='Facebook'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <i
-                                    className='fa fa-facebook'
-                                    aria-label='Facebook'
-                                />
+                            <a href={data.socialmedia.facebook} title="Facebook" target="_blank" rel="noreferrer">
+                                <i className="fa fa-facebook" aria-label="Facebook" />
                             </a>
                         </li>
                         <li>
-                            <a
-                                href='https://www.tripadvisor.fr/Restaurant_Review-g187265-d3436536-Reviews-La_Coree-Lyon_Rhone_Auvergne_Rhone_Alpes.html/'
-                                title='TripAdvisor'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <i
-                                    className='fa fa-tripadvisor'
-                                    aria-label='TripAdvisor'
-                                />
+                            <a href={data.socialmedia.tripadvisor} title="TripAdvisor" target="_blank" rel="noreferrer">
+                                <i className="fa fa-tripadvisor" aria-label="TripAdvisor" />
                             </a>
                         </li>
                     </ul>

@@ -1,10 +1,10 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import {Carousel} from 'react-responsive-carousel';
+import { Carousel } from 'react-responsive-carousel';
 
-function HeadCarousel({data}) {
+function HeadCarousel({ data }) {
     return (
-        <div id='slideshow'>
+        <div id="slideshow">
             <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
@@ -14,22 +14,17 @@ function HeadCarousel({data}) {
                 showIndicators={false}
                 dynamicHeight={true}
             >
-                {data.strapiSlideshow.slider.map((item) => {
+                {data.slider.map(item => {
                     return (
                         <div key={item.id}>
                             <img
-                                src={
-                                    process.env.GATSBY_API_URL +
-                                    item.image[0].url
-                                }
+                                src={process.env.GATSBY_API_URL + item.image[0].url}
                                 alt={item.image[0].name}
-                                style={{height: 'inherit'}}
+                                style={{ height: 'inherit' }}
                             />
-                            <div className='slider-title-container'>
-                                <p className='slider-title'>{item.title}</p>
-                                <p className='slider-subtitle'>
-                                    {item.subtitle}
-                                </p>
+                            <div className="slider-title-container">
+                                <p className="slider-title">{item.title}</p>
+                                <p className="slider-subtitle">{item.subtitle}</p>
                             </div>
                         </div>
                     );

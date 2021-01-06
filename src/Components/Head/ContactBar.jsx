@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ContactBar() {
+function ContactBar({ data }) {
     return (
         <div id='header-bottom'>
             <div className='wrapper contactBar'>
@@ -14,25 +14,25 @@ function ContactBar() {
                         </div>
                     </div>
                 </div>
-                <div className='header-card'>
+                <div className="header-card">
                     <div>
-                        <i className='fa fa-phone' />
+                        <i className="fa fa-phone" />
                         <div>
                             <span>
-                                <a href='tel:+33 9 83 81 10 96' title=''>
-                                    09 83 81 10 96
+                                <a href={'tel:+33 ' + data.phone} title="">
+                                    0{data.phone}{' '}
                                 </a>
                             </span>
                         </div>
                     </div>
                 </div>
-                <div className='header-card'>
+                <div className="header-card">
                     <div>
-                        <i className='fa fa-map' />
+                        <i className="fa fa-map" />
                         <div>
                             <span>
-                                <a href='#contact' title=''>
-                                    278 rue Garibaldi, 69003 Lyon
+                                <a href="#contact" title="">
+                                    {data.address}
                                 </a>
                             </span>
                         </div>

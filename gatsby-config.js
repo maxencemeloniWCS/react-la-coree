@@ -22,15 +22,17 @@ module.exports = {
           `gallery`,
           `legal-notice`,
           `slideshow`,
+          `settings`
         ],
       },
     },
   ],
-/*  siteMetadata:{
+  siteMetadata:{
     title :"Restaurant La Corée - restaurant barbecue coréen à Lyon",
     titleTemplate: "%s · Restaurant La Corée - restaurant coréen à Lyon",
     description : "Saveurs coréennes traditionnel dans une salle conviviale au mobilier brun et aux tables dotées de teppanyaki. Barbecue Coréen",
     url:"https://www.restaurant-la-coree.fr/",
-    image:""
-  },*/
+    image:"",
+    twitterUsername: "@",
+  },
 }

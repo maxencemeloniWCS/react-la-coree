@@ -74,6 +74,10 @@ section#header header.fixed {
     background-color: #151515;
 }
 
+section#header header.fixed .wrapper {
+    padding: 20px;
+}
+
 section#header header h1 {
     align-self: center;
     color: #f8f8f8;

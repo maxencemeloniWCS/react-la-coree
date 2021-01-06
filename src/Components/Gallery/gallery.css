@@ -18,16 +18,16 @@ section#gallery .carousel__inner-slide p {
 
 @media screen and (max-width: 1280px) {
     section#gallery .gallery-arrow {
-        left: 4vw;
+        left: 20px;
         top: 45%;
-        margin-top: -2.5vw;
+        margin-top: -10px;
     }
     section#gallery #arrow-right {
         left: auto;
-        right: 4vw;
+        right: 20px;
     }
     section#gallery .gallery-arrow i {
-        font-size: 5vw;
+        font-size: 25px;
     }
 }
 

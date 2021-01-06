@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import '../assets/css/reset.css';
 import '../assets/css/style.css';
 import Header from '../Components/Head';
@@ -11,17 +11,17 @@ import Footer from '../Components/Footer';
 import SEO from '../seo';
 
 export default function Home() {
-  return (
-    <div className="App">
-        <SEO/>
-      <Header/>
-      <main>
-        <About/>
-        <Menu/>
-        <Gallery/>
-        <Contact />
-      </main>
-      <Footer/>
-      <MobileOverlay />
-    </div>)
+    return (
+        <div className="App">
+            <SEO />
+            <Header />
+            <main>
+                <About />
+                <Menu />
+                <Gallery />
+                <Contact />
+            </main>
+            <Footer />
+        </div>
+    );
 }

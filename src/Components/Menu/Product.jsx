@@ -5,7 +5,7 @@ function Product({product}) {
         <li>
             <span>
                 <span>{product.title}</span>
-                <span className="price">{product.price} €</span>
+                <span className="price">{product.price && product.price+' €'}</span>
             </span>
             <span>{product.description}</span>
         </li>

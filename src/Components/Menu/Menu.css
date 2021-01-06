@@ -22,17 +22,17 @@ section#menu .wrapper > ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1 1 30%;
+    flex: 2 2 47%;
     margin-right: 35px;
+    margin-bottom: 25px;
 }
 
-section#menu .wrapper > ul:nth-child(3) {
+/*section#menu .wrapper > ul:nth-child(3) {
     margin-right: 0;
-}
+}*/
 
 section#menu .wrapper > ul > li {
     width: 100%;
-    margin-bottom: 25px;
     display: flex;
 }
 section#menu .wrapper > ul > li.category-title {
@@ -41,7 +41,7 @@ section#menu .wrapper > ul > li.category-title {
 section#menu .wrapper > ul > li.category-title h4 {
     color: #dc3333;
     margin-bottom: 15px;
-    min-height: 75px;
+    min-height: 50px;
 }
 section#menu .wrapper > ul > li.category-title h4 span {
     width: 100%;
@@ -50,9 +50,11 @@ section#menu .wrapper > ul > li.category-title h4 span {
 
 }
 
-section#menu .wrapper > ul > li ul {}
+section#menu .wrapper > ul > li ul {
+    width: 100%;
+}
 section#menu .wrapper > ul > li ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 section#menu .wrapper > ul > li ul li {
 }

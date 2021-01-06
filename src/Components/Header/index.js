@@ -5,7 +5,7 @@ import './Header.css';
 import {graphql, useStaticQuery} from 'gatsby';
 import Carousel from './Carousel';
 
-function Header() {
+function Header({modalIsOpen, setModalIsOpen}) {
     const data = useStaticQuery(graphql`
         {
             strapiSettings {
@@ -34,7 +34,11 @@ function Header() {
     return (
         <section id="header">
             <div id="header-elems">
-                <Nav data={data.strapiSettings} />
+                <Nav
+                    data={data.strapiSettings}
+                    modalIsOpen={modalIsOpen}
+                    setModalIsOpen={setModalIsOpen}
+                />
             </div>
             <ContactBar data={data.strapiSettings} />
             <Carousel data={data.strapiSlideshow} />

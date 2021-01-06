@@ -1,0 +1,74 @@
+section#menu {
+    background: #151515;
+}
+
+section#menu .wrapper {
+    flex-wrap: wrap;
+}
+
+section#menu h3 {
+    width: 100%;
+    color: #f8f8f8;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+section#menu h3 span {
+    color: #dc3333;
+}
+
+section#menu .wrapper > ul {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 2 2 47%;
+    margin-right: 35px;
+    margin-bottom: 25px;
+}
+
+/*section#menu .wrapper > ul:nth-child(3) {
+    margin-right: 0;
+}*/
+
+section#menu .wrapper > ul > li {
+    width: 100%;
+    display: flex;
+}
+section#menu .wrapper > ul > li.category-title {
+
+}
+section#menu .wrapper > ul > li.category-title h4 {
+    color: #dc3333;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+section#menu .wrapper > ul > li.category-title h4 span {
+    width: 100%;
+    display: block;
+    font-weight: 400;
+
+}
+
+section#menu .wrapper > ul > li ul {
+    width: 100%;
+}
+section#menu .wrapper > ul > li ul li {
+    margin-bottom: 10px;
+}
+section#menu .wrapper > ul > li ul li {
+}
+
+section#menu .wrapper > ul > li ul li > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #d4d4d4;
+}
+
+section#menu .wrapper  > ul > li ul li > span:last-child {
+    font-weight: 400;
+}
+
+

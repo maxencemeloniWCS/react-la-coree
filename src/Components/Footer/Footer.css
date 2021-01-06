@@ -1,3 +1,29 @@
+footer {
+    width: 100%;
+    height: 80px;
+    background: #151515;
+}
+
+footer p {
+    align-self: center;
+    color: #f8f8f8;
+}
+
+footer ul {
+    align-self: center;
+    margin-left: auto;
+}
+
+footer ul li {
+}
+
+footer ul li a {
+}
+
+footer ul li a:hover {
+    color: #dc3333;
+}
+
 .Modal {
     position: absolute;
     max-width: 1280px;
@@ -51,4 +77,11 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     z-index: 2;
+}
+
+
+@media screen and (max-width: 450px) {
+    footer {
+        display: none;
+    }
 }

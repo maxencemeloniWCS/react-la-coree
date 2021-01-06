@@ -1,23 +1,28 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
-import Products from "./products";
+import Categories from "./Categories";
+import "./Menu.css";
 
 function Menu() {
     const data = useStaticQuery(graphql`
-    query Products {
-      allStrapiProducts {
-        nodes {
-          description
-          price
-          title
-        }
+    query Menu {
+      strapiMenu {
+        categories {
+            title
+            description
+            products {
+                title
+                description
+                price
+            }
+        } 
       }
     }
   `);
     return (<section id="menu">
         <h3><span>M</span>enu</h3>
         <div className="wrapper">
-            <Products products={data.allStrapiProducts.nodes}/>
+            <Categories categories={data.strapiMenu.categories}/>
         </div>
     </section>)
 

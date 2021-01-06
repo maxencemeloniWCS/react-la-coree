@@ -1,0 +1,102 @@
+section#contact {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 600px;
+}
+
+section#contact .wrapper {
+    padding: 0;
+}
+
+section#contact #maps {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    z-index: 1;
+    background: url('/assets/images/map.png') no-repeat;
+    background-size: cover;
+}
+
+section#contact #contact-form {
+    width: 400px;
+    height: inherit;
+    position: absolute;
+    z-index: 2;
+    left: 250px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+section#contact #contact-form h3 {
+    color: #f8f8f8;
+    text-align: center;
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+section#contact #contact-form #form-contact {
+}
+
+section#contact #contact-form #form-contact input,
+section#contact #contact-form #form-contact textarea {
+    width: 100%;
+    background: none;
+    color: #f8f8f8;
+    padding: 10px 0;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+section#contact #contact-form #form-contact textarea {
+    max-height: 190px;
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+section#contact #contact-form #form-contact input:focus,
+section#contact #contact-form #form-contact textarea:focus {
+    outline: none;
+}
+
+section#contact #contact-form #form-contact textarea::placeholder,
+section#contact #contact-form #form-contact input::placeholder {
+    color: #f8f8f8;
+}
+
+section#contact #contact-form #form-contact textarea {
+    height: 100px;
+}
+
+section#contact #contact-form #form-contact button {
+    width: 150px;
+    padding: 15px;
+    border: 1px solid #f8f8f8;
+    background: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #f8f8f8;
+}
+
+section#contact #contact-form #form-contact p#form-error {
+    color: #dc3333;
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
+}
+
+@media screen and (max-width: 380px) {
+}

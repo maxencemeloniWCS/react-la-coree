@@ -89,6 +89,9 @@ section#contact #contact-form #form-contact button:hover {
 
 section#contact #contact-form #form-contact p#form-error {
     color: #dc3333;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1280px) {

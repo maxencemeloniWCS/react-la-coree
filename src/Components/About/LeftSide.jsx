@@ -6,7 +6,9 @@ function LeftSide({title, description}) {
         <div className="about-side" id="about-left">
             <div>
                 <h3>{title}</h3>
-                <p><Markdown>{description}</Markdown></p>
+
+                <Markdown>{description}</Markdown>
+
             </div>
         </div>
     )

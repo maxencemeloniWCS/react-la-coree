@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import ReactGA from 'react-ga';
 
 import '../assets/css/style.css';
 import Header from '../Components/Header';
@@ -9,9 +8,6 @@ import Gallery from '../Components/Gallery';
 import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import SEO from '../seo';
-
-const trackingId = "UA-126844155-5";
-ReactGA.initialize(trackingId);
 
 export default function Home() {
     const [modalIsOpen, setModalIsOpen] = useState(false);

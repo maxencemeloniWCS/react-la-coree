@@ -286,6 +286,10 @@ section#header div#header-bottom div.header-card#card-planning #planning p stron
     section#header header nav.burger-nav ul li {
         margin-top: 20px;
     }
+
+    section#header header nav.burger-nav ul li p {
+        color: #f8f8f8;
+    }
 }
 @media screen and (max-width: 1080px) {
     section div#slideshow div.slider-title-container p.slider-title {
@@ -320,6 +324,11 @@ section#header div#header-bottom div.header-card#card-planning #planning p stron
         border: none;
         padding: 0;
     }
+
+    section#header header.fixed {
+        height: 60px
+    }
+
     section#header header nav ul li a {
         font-size: 16px;
     }

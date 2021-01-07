@@ -184,11 +184,6 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
                                 </ul>
                                 <ul>
                                     <li>
-                                        <a href="#copyright" title="">
-                                            Copyright blabla
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a
                                             href="#mentions-legales"
                                             onClick={openModal}
@@ -196,6 +191,9 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
                                         >
                                             Mentions légales
                                         </a>
+                                    </li>
+                                    <li>
+                                        <p>Copyright restaurant La Corée</p>
                                     </li>
                                 </ul>
                             </nav>

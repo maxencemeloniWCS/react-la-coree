@@ -38,7 +38,7 @@ function Gallery() {
     }
 
     const checkIsMobile = useCallback(() => {
-        setIsMobile(window.innerWidth < 960);
+        setIsMobile(window.innerWidth <= 768);
     }, []);
 
     useEffect(() => {

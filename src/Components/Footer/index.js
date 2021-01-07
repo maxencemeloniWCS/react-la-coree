@@ -43,11 +43,8 @@ function Footer({modalIsOpen, setModalIsOpen}) {
                         overlayClassName="Overlay"
                     >
                         <button id="close-legal-notice" className="noselect"><i className="fa fa-close"/></button>
-                        <div onClick={closeModal} role="alertdialog">
-                            <Markdown>
-                                {data.strapiLegalNotice.legalnotice}
-                            </Markdown>
-                        </div>
+                        <div onClick={closeModal} role="alertdialog" dangerouslySetInnerHTML={{__html: data.strapiLegalNotice.legalnotice}} />
+
                     </Modal>
                 </div>
             </div>

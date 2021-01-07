@@ -1,9 +1,6 @@
-section {
-    overflow: hidden;
-}
-
 section#menu {
     background: #151515;
+    overflow: hidden;
 }
 
 section#menu.open {

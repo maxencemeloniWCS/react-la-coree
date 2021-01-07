@@ -9,7 +9,7 @@ section div#header-elems {
     position: absolute;
     width: calc(100% - 50px);
     height: inherit;
-    z-index: 3;
+    z-index: 4;
     margin: 0 25px;
 }
 section div#header-elems .wrapper {
@@ -354,6 +354,12 @@ section#header div#header-bottom div.header-card#card-planning #planning p stron
     }
     section div#slideshow div.slider-title-container p.slider-subtitle {
         font-size: 15px;
+    }
+
+    section#header div#header-bottom div.header-card#card-planning #planning {
+        bottom: inherit;
+        top: 43px;
+        background: rgba(0, 0, 0, 0.9);
     }
 
     section#header div#header-bottom div.header-card#card-planning #planning p {

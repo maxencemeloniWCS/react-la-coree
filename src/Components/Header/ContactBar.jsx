@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 import Planning from './Planning';
+import {Context} from '../../context/Context';
 
 function ContactBar({data}) {
+    const {isMobile} = useContext(Context);
     const [isOpen, setIsOpen] = useState(true);
     const [hours, setHours] = useState('');
     const [displayPlanning, setDisplayPlanning] = useState(false);
@@ -22,6 +24,11 @@ function ContactBar({data}) {
     }, [planning]);
 
     function showHours() {
+        if(!isMobile) {
+            setDisplayPlanning(!displayPlanning);
+        }
+    }
+    function showHoursClick() {
         setDisplayPlanning(!displayPlanning);
     }
 
@@ -31,7 +38,7 @@ function ContactBar({data}) {
                 <div
                     className="header-card"
                     id="card-planning"
-                    onClick={showHours}
+                    onClick={showHoursClick}
                     onMouseEnter={showHours}
                     onMouseLeave={showHours}
                 >

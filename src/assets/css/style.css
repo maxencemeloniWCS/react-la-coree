@@ -168,6 +168,20 @@ h4 {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgba(0,0,0,0) inset !important;
+    color: #f8f8f8 !important;
+    caret-color: #f8f8f8 !important;
+    -webkit-text-fill-color: #f8f8f8 !important;
+}
+
 @media screen and (max-width: 1280px) {
 }
 

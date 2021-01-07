@@ -8,10 +8,10 @@ function Menu() {
 
     const handleClick = (e) => {
         e.preventDefault();
-        setIsOpen((prev) => !prev);
+        setIsOpen(prev => !prev);
         let top = document.getElementById(
-            e.target.getAttribute('link').replace('#', '')
-        ).offsetTop;
+            e.target.getAttribute('data-link').replace('#', '')
+        ).offsetTop + 100;
         window.scrollTo({top, behavior: 'smooth'});
     };
 
@@ -41,12 +41,11 @@ function Menu() {
             </div>
             <div className="gradientBack">
                 <button
-                    type="button"
                     className="displayMenuButton"
                     onClick={handleClick}
-                    link="#menu"
+                    data-link="#menu"
                 >
-                    {isOpen ? 'Masquer le menu' : 'Afficher le menu'}
+                    {isOpen ? 'Masquer' : 'Afficher'} le menu
                 </button>
             </div>
         </section>

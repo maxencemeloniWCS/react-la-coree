@@ -1,7 +1,16 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';
+import React, {
+    useState,
+    useRef,
+    useEffect,
+    useCallback,
+    useContext,
+} from 'react';
+import {Context} from '../../context/Context';
 import MobileOverlay from '../MobileOverlay';
 
-function Nav({data, modalIsOpen, setModalIsOpen}) {
+function Nav({data, setModalIsOpen}) {
+    const {isMobile, checkIsMobile} = useContext(Context);
+
     const [scrolled, setScrolled] = useState(false);
 
     const [isOpen, setIsOpen] = useState(false);
@@ -17,17 +26,6 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
         headerHeightRef.current = data;
         _setHeaderHeight(data);
     }
-
-    const [isMobile, _setIsMobile] = useState(false);
-    const isMobileRef = useRef(isMobile);
-    function setIsMobile(data) {
-        isMobileRef.current = data;
-        _setIsMobile(data);
-    }
-
-    const checkIsMobile = useCallback(() => {
-        setIsMobile(window.innerWidth <= 768);
-    }, []);
 
     let lastScrollTop = useRef(0);
 

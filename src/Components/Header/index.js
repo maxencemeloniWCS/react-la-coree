@@ -1,22 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Nav from './Nav';
 import ContactBar from './ContactBar';
 import './Header.css';
 import {graphql, useStaticQuery} from 'gatsby';
 import Carousel from './Carousel';
+import {Context} from '../../context/Context';
 
 function Header({modalIsOpen, setModalIsOpen}) {
+    const {settings} = useContext(Context);
+
     const data = useStaticQuery(graphql`
         {
-            strapiSettings {
-                title
-                address
-                phone
-                socialmedia {
-                    facebook
-                    tripadvisor
-                }
-            }
             strapiSlideshow {
                 slider {
                     image {
@@ -35,12 +29,12 @@ function Header({modalIsOpen, setModalIsOpen}) {
         <section id="header">
             <div id="header-elems">
                 <Nav
-                    data={data.strapiSettings}
+                    data={settings}
                     modalIsOpen={modalIsOpen}
                     setModalIsOpen={setModalIsOpen}
                 />
             </div>
-            <ContactBar data={data.strapiSettings} />
+            <ContactBar data={settings} />
             <Carousel data={data.strapiSlideshow} />
         </section>
     );

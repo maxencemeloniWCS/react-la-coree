@@ -1,5 +1,6 @@
-import React, {useEffect, useState, useRef, useCallback} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
+import {Context} from '../../context/Context';
 import {
     CarouselProvider,
     Slider,
@@ -12,6 +13,8 @@ import './Gallery.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function Gallery() {
+    const {isMobile, checkIsMobile} = useContext(Context);
+
     const data = useStaticQuery(graphql`
         {
             strapiGallery {
@@ -28,18 +31,6 @@ function Gallery() {
             }
         }
     `);
-
-    const [isMobile, _setIsMobile] = useState(false);
-    const isMobileRef = useRef(isMobile);
-
-    function setIsMobile(data) {
-        isMobileRef.current = data;
-        _setIsMobile(data);
-    }
-
-    const checkIsMobile = useCallback(() => {
-        setIsMobile(window.innerWidth <= 768);
-    }, []);
 
     useEffect(() => {
         checkIsMobile();

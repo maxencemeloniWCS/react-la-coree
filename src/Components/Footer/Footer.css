@@ -60,7 +60,6 @@ button#close-legal-notice:focus {
     z-index: 1;
     cursor: default;
     overflow-y: scroll;
-    text-align: justify;
 }
 
 .Modal::-webkit-scrollbar {
@@ -87,6 +86,20 @@ button#close-legal-notice:focus {
     line-height: 300%;
 }
 
+.Modal p {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    color: #151515;
+}
+
+.Modal a {
+    color: #151515;
+}
+
+
 .Overlay {
     position: fixed;
     top: 0;
@@ -100,7 +113,7 @@ button#close-legal-notice:focus {
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     footer {
         display: none;
     }

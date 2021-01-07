@@ -169,6 +169,21 @@ function Nav({data, modalIsOpen, setModalIsOpen}) {
                                 </ul>
                                 <ul>
                                     <li>
+                                        <a
+                                            href={'tel:+33 ' + data.phone}
+                                            title=""
+                                        >
+                                            0{data.phone}{' '}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#maps" title="">
+                                            {data.address}
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
                                         <a href="#copyright" title="">
                                             Copyright blabla
                                         </a>

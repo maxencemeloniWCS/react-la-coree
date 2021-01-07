@@ -13,13 +13,13 @@ function ContactBar({data}) {
         '11:45–14:30',
         '11:45–14:30',
         '11:45–14:30, 18:30–20:30',
-        '11:45–14:30, 18:30–20:30'
+        '11:45–14:30, 18:30–20:30',
     ];
     useEffect(() => {
         let today = dayjs().day();
         setIsOpen(today !== 0);
         setHours(planning[today]);
-    }, []);
+    }, [planning]);
 
     function showHours() {
         setDisplayPlanning(!displayPlanning);
@@ -28,16 +28,24 @@ function ContactBar({data}) {
     return (
         <div id="header-bottom">
             <div className="wrapper contactBar">
-                <div className="header-card" id="card-planning" onClick={showHours} onMouseEnter={showHours} onMouseLeave={showHours}>
+                <div
+                    className="header-card"
+                    id="card-planning"
+                    onClick={showHours}
+                    onMouseEnter={showHours}
+                    onMouseLeave={showHours}
+                >
                     <div>
                         <i className="fa fa-clock" />
                         <div>
-                            <span>{isOpen ? 'Ouvert':'Fermé'} aujourd'hui </span>
+                            <span>
+                                {isOpen ? 'Ouvert' : 'Fermé'} aujourd'hui{' '}
+                            </span>
                             <span>{hours}</span>
                             <span> </span>
                         </div>
                     </div>
-                    <Planning displayPlanning={displayPlanning}/>
+                    <Planning displayPlanning={displayPlanning} />
                 </div>
                 <div className="header-card">
                     <div>

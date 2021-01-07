@@ -5,8 +5,8 @@ import Planning from './Planning';
 function ContactBar({data}) {
     const [isOpen, setIsOpen] = useState(true);
     const [hours, setHours] = useState('');
-    const [displayHours, setDisplayHours] = useState(false);
-    const planing = [
+    const [displayPlanning, setDisplayPlanning] = useState(false);
+    const planning = [
         'Voir les horaires',
         '11:45–14:30',
         '11:45–14:30',
@@ -18,11 +18,11 @@ function ContactBar({data}) {
     useEffect(() => {
         let today = dayjs().day();
         setIsOpen(today !== 0);
-        setHours(planing[today]);
+        setHours(planning[today]);
     }, []);
 
     function showHours() {
-        setDisplayHours(!displayHours);
+        setDisplayPlanning(!displayPlanning);
     }
 
     return (
@@ -37,7 +37,7 @@ function ContactBar({data}) {
                             <span> </span>
                         </div>
                     </div>
-                    <Planning displayHours={displayHours}/>
+                    <Planning displayPlanning={displayPlanning}/>
                 </div>
                 <div className="header-card">
                     <div>

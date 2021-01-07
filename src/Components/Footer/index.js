@@ -22,7 +22,7 @@ function Footer({ modalIsOpen, setModalIsOpen }) {
     return (
         <footer>
             <div className="wrapper">
-                <p>Copyright blabla</p>
+                <p>Copyright restaurant La Corée</p>
                 <ul>
                     <li>
                         <a href="#mentions-legales" onClick={openModal} title="">

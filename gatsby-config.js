@@ -45,5 +45,16 @@ module.exports = {
                 }
             },
         },
+        {
+            resolve: 'gatsby-plugin-htaccess',
+            options: {
+                RewriteBase: '/',
+                https: true,
+                www: true,
+                SymLinksIfOwnerMatch: true,
+                host: 'www.restaurant-la-coree.fr', // if 'www' is set to 'false', be sure to also remove it here!
+                custom: ``,
+            },
+        },
     ]
 }

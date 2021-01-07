@@ -1,6 +1,95 @@
 /* Reset */
-blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}abbr,acronym,fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%}q:after,q:before{content:""}a{outline:0}input:-webkit-autofill,input:-webkit-autofill:active,input:-webkit-autofill:focus,input:-webkit-autofill:hover{-webkit-box-shadow:0 0 0 1000px #e0e1e4 inset;transition:background-color 5000s ease-in-out 0s;color:#002e62!important;caret-color:#002e62!important;-webkit-text-fill-color:#002e62!important}
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+abbr,
+acronym,
+fieldset,
+img {
+    border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-weight: 400;
+}
+ol,
+ul {
+    list-style: none;
+}
+caption,
+th {
+    text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-size: 100%;
+}
+q:after,
+q:before {
+    content: '';
+}
+a {
+    outline: 0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 1000px #e0e1e4 inset;
+    transition: background-color 5000s ease-in-out 0s;
+    color: #002e62 !important;
+    caret-color: #002e62 !important;
+    -webkit-text-fill-color: #002e62 !important;
+}
 /* Global */
+
+@font-face {
+    font-family: 'OPTIScript-Bold';
+    src: url('../fonts/OPTIScript-Bold.ttf.woff') format('woff'),
+        url('../fonts/OPTIScript-Bold.ttf.svg#OPTIScript-Bold') format('svg'), url('../fonts/OPTIScript-Bold.ttf.eot'),
+        url('../fonts/OPTIScript-Bold.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -34,7 +123,7 @@ a:hover {
 
 h1 {
     font-size: 33px;
-    font-family: Merienda, sans-serif;
+    font-family: 'OPTIScript-Bold';
 }
 
 h2 {
@@ -43,7 +132,7 @@ h2 {
 
 h3 {
     font-size: 32px;
-    font-family: Merienda, sans-serif;
+    font-family: 'OPTIScript-Bold';
 }
 
 h4 {
@@ -69,8 +158,6 @@ h4 {
     width: 0;
 }
 
-
-
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -94,7 +181,6 @@ h4 {
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 450px) {

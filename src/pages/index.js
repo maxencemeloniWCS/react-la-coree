@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Provider} from '../context/Context';
 
 import '../assets/css/style.css';
 import Header from '../Components/Header';
@@ -14,15 +15,23 @@ export default function Home() {
 
     return (
         <div className="App">
-            <SEO/>
-            <Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
-            <main>
-                <About/>
-                <Menu/>
-                <Gallery/>
-                <Contact/>
-            </main>
-            <Footer modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
+            <Provider>
+                <SEO />
+                <Header
+                    modalIsOpen={modalIsOpen}
+                    setModalIsOpen={setModalIsOpen}
+                />
+                <main>
+                    <About />
+                    <Menu />
+                    <Gallery />
+                    <Contact />
+                </main>
+                <Footer
+                    modalIsOpen={modalIsOpen}
+                    setModalIsOpen={setModalIsOpen}
+                />
+            </Provider>
         </div>
     );
 }

@@ -27,7 +27,7 @@ footer ul li a:hover {
 button#close-legal-notice {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 20px;
     padding: 5px 8px;
     border-radius: 50%;
     border: 2px solid #151515;
@@ -99,7 +99,6 @@ button#close-legal-notice:focus {
     color: #151515;
 }
 
-
 .Overlay {
     position: fixed;
     top: 0;
@@ -111,7 +110,6 @@ button#close-legal-notice:focus {
     -webkit-backdrop-filter: blur(3px);
     z-index: 2;
 }
-
 
 @media screen and (max-width: 768px) {
     footer {
